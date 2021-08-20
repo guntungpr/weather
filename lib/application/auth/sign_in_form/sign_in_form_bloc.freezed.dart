@@ -40,6 +40,10 @@ class _$SignInFormEventTearOff {
   SignInWithGooglePressed signInWithGooglePressed() {
     return const SignInWithGooglePressed();
   }
+
+  SignInLocal signInLocal() {
+    return const SignInLocal();
+  }
 }
 
 /// @nodoc
@@ -54,6 +58,7 @@ mixin _$SignInFormEvent {
     required TResult Function() registerWithEmailAndPasswordPressed,
     required TResult Function() signInWithEmailAndPasswordPressed,
     required TResult Function() signInWithGooglePressed,
+    required TResult Function() signInLocal,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +68,7 @@ mixin _$SignInFormEvent {
     TResult Function()? registerWithEmailAndPasswordPressed,
     TResult Function()? signInWithEmailAndPasswordPressed,
     TResult Function()? signInWithGooglePressed,
+    TResult Function()? signInLocal,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -72,6 +78,7 @@ mixin _$SignInFormEvent {
     TResult Function()? registerWithEmailAndPasswordPressed,
     TResult Function()? signInWithEmailAndPasswordPressed,
     TResult Function()? signInWithGooglePressed,
+    TResult Function()? signInLocal,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -85,6 +92,7 @@ mixin _$SignInFormEvent {
         signInWithEmailAndPasswordPressed,
     required TResult Function(SignInWithGooglePressed value)
         signInWithGooglePressed,
+    required TResult Function(SignInLocal value) signInLocal,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -96,6 +104,7 @@ mixin _$SignInFormEvent {
     TResult Function(SignInWithEmailAndPasswordPressed value)?
         signInWithEmailAndPasswordPressed,
     TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult Function(SignInLocal value)? signInLocal,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -107,6 +116,7 @@ mixin _$SignInFormEvent {
     TResult Function(SignInWithEmailAndPasswordPressed value)?
         signInWithEmailAndPasswordPressed,
     TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult Function(SignInLocal value)? signInLocal,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -200,6 +210,7 @@ class _$EmailChanged implements EmailChanged {
     required TResult Function() registerWithEmailAndPasswordPressed,
     required TResult Function() signInWithEmailAndPasswordPressed,
     required TResult Function() signInWithGooglePressed,
+    required TResult Function() signInLocal,
   }) {
     return emailChanged(emailStr);
   }
@@ -212,6 +223,7 @@ class _$EmailChanged implements EmailChanged {
     TResult Function()? registerWithEmailAndPasswordPressed,
     TResult Function()? signInWithEmailAndPasswordPressed,
     TResult Function()? signInWithGooglePressed,
+    TResult Function()? signInLocal,
   }) {
     return emailChanged?.call(emailStr);
   }
@@ -224,6 +236,7 @@ class _$EmailChanged implements EmailChanged {
     TResult Function()? registerWithEmailAndPasswordPressed,
     TResult Function()? signInWithEmailAndPasswordPressed,
     TResult Function()? signInWithGooglePressed,
+    TResult Function()? signInLocal,
     required TResult orElse(),
   }) {
     if (emailChanged != null) {
@@ -243,6 +256,7 @@ class _$EmailChanged implements EmailChanged {
         signInWithEmailAndPasswordPressed,
     required TResult Function(SignInWithGooglePressed value)
         signInWithGooglePressed,
+    required TResult Function(SignInLocal value) signInLocal,
   }) {
     return emailChanged(this);
   }
@@ -257,6 +271,7 @@ class _$EmailChanged implements EmailChanged {
     TResult Function(SignInWithEmailAndPasswordPressed value)?
         signInWithEmailAndPasswordPressed,
     TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult Function(SignInLocal value)? signInLocal,
   }) {
     return emailChanged?.call(this);
   }
@@ -271,6 +286,7 @@ class _$EmailChanged implements EmailChanged {
     TResult Function(SignInWithEmailAndPasswordPressed value)?
         signInWithEmailAndPasswordPressed,
     TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult Function(SignInLocal value)? signInLocal,
     required TResult orElse(),
   }) {
     if (emailChanged != null) {
@@ -360,6 +376,7 @@ class _$PasswordChanged implements PasswordChanged {
     required TResult Function() registerWithEmailAndPasswordPressed,
     required TResult Function() signInWithEmailAndPasswordPressed,
     required TResult Function() signInWithGooglePressed,
+    required TResult Function() signInLocal,
   }) {
     return passwordChanged(passwordStr);
   }
@@ -372,6 +389,7 @@ class _$PasswordChanged implements PasswordChanged {
     TResult Function()? registerWithEmailAndPasswordPressed,
     TResult Function()? signInWithEmailAndPasswordPressed,
     TResult Function()? signInWithGooglePressed,
+    TResult Function()? signInLocal,
   }) {
     return passwordChanged?.call(passwordStr);
   }
@@ -384,6 +402,7 @@ class _$PasswordChanged implements PasswordChanged {
     TResult Function()? registerWithEmailAndPasswordPressed,
     TResult Function()? signInWithEmailAndPasswordPressed,
     TResult Function()? signInWithGooglePressed,
+    TResult Function()? signInLocal,
     required TResult orElse(),
   }) {
     if (passwordChanged != null) {
@@ -403,6 +422,7 @@ class _$PasswordChanged implements PasswordChanged {
         signInWithEmailAndPasswordPressed,
     required TResult Function(SignInWithGooglePressed value)
         signInWithGooglePressed,
+    required TResult Function(SignInLocal value) signInLocal,
   }) {
     return passwordChanged(this);
   }
@@ -417,6 +437,7 @@ class _$PasswordChanged implements PasswordChanged {
     TResult Function(SignInWithEmailAndPasswordPressed value)?
         signInWithEmailAndPasswordPressed,
     TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult Function(SignInLocal value)? signInLocal,
   }) {
     return passwordChanged?.call(this);
   }
@@ -431,6 +452,7 @@ class _$PasswordChanged implements PasswordChanged {
     TResult Function(SignInWithEmailAndPasswordPressed value)?
         signInWithEmailAndPasswordPressed,
     TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult Function(SignInLocal value)? signInLocal,
     required TResult orElse(),
   }) {
     if (passwordChanged != null) {
@@ -499,6 +521,7 @@ class _$RegisterWithEmailAndPasswordPressed
     required TResult Function() registerWithEmailAndPasswordPressed,
     required TResult Function() signInWithEmailAndPasswordPressed,
     required TResult Function() signInWithGooglePressed,
+    required TResult Function() signInLocal,
   }) {
     return registerWithEmailAndPasswordPressed();
   }
@@ -511,6 +534,7 @@ class _$RegisterWithEmailAndPasswordPressed
     TResult Function()? registerWithEmailAndPasswordPressed,
     TResult Function()? signInWithEmailAndPasswordPressed,
     TResult Function()? signInWithGooglePressed,
+    TResult Function()? signInLocal,
   }) {
     return registerWithEmailAndPasswordPressed?.call();
   }
@@ -523,6 +547,7 @@ class _$RegisterWithEmailAndPasswordPressed
     TResult Function()? registerWithEmailAndPasswordPressed,
     TResult Function()? signInWithEmailAndPasswordPressed,
     TResult Function()? signInWithGooglePressed,
+    TResult Function()? signInLocal,
     required TResult orElse(),
   }) {
     if (registerWithEmailAndPasswordPressed != null) {
@@ -542,6 +567,7 @@ class _$RegisterWithEmailAndPasswordPressed
         signInWithEmailAndPasswordPressed,
     required TResult Function(SignInWithGooglePressed value)
         signInWithGooglePressed,
+    required TResult Function(SignInLocal value) signInLocal,
   }) {
     return registerWithEmailAndPasswordPressed(this);
   }
@@ -556,6 +582,7 @@ class _$RegisterWithEmailAndPasswordPressed
     TResult Function(SignInWithEmailAndPasswordPressed value)?
         signInWithEmailAndPasswordPressed,
     TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult Function(SignInLocal value)? signInLocal,
   }) {
     return registerWithEmailAndPasswordPressed?.call(this);
   }
@@ -570,6 +597,7 @@ class _$RegisterWithEmailAndPasswordPressed
     TResult Function(SignInWithEmailAndPasswordPressed value)?
         signInWithEmailAndPasswordPressed,
     TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult Function(SignInLocal value)? signInLocal,
     required TResult orElse(),
   }) {
     if (registerWithEmailAndPasswordPressed != null) {
@@ -634,6 +662,7 @@ class _$SignInWithEmailAndPasswordPressed
     required TResult Function() registerWithEmailAndPasswordPressed,
     required TResult Function() signInWithEmailAndPasswordPressed,
     required TResult Function() signInWithGooglePressed,
+    required TResult Function() signInLocal,
   }) {
     return signInWithEmailAndPasswordPressed();
   }
@@ -646,6 +675,7 @@ class _$SignInWithEmailAndPasswordPressed
     TResult Function()? registerWithEmailAndPasswordPressed,
     TResult Function()? signInWithEmailAndPasswordPressed,
     TResult Function()? signInWithGooglePressed,
+    TResult Function()? signInLocal,
   }) {
     return signInWithEmailAndPasswordPressed?.call();
   }
@@ -658,6 +688,7 @@ class _$SignInWithEmailAndPasswordPressed
     TResult Function()? registerWithEmailAndPasswordPressed,
     TResult Function()? signInWithEmailAndPasswordPressed,
     TResult Function()? signInWithGooglePressed,
+    TResult Function()? signInLocal,
     required TResult orElse(),
   }) {
     if (signInWithEmailAndPasswordPressed != null) {
@@ -677,6 +708,7 @@ class _$SignInWithEmailAndPasswordPressed
         signInWithEmailAndPasswordPressed,
     required TResult Function(SignInWithGooglePressed value)
         signInWithGooglePressed,
+    required TResult Function(SignInLocal value) signInLocal,
   }) {
     return signInWithEmailAndPasswordPressed(this);
   }
@@ -691,6 +723,7 @@ class _$SignInWithEmailAndPasswordPressed
     TResult Function(SignInWithEmailAndPasswordPressed value)?
         signInWithEmailAndPasswordPressed,
     TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult Function(SignInLocal value)? signInLocal,
   }) {
     return signInWithEmailAndPasswordPressed?.call(this);
   }
@@ -705,6 +738,7 @@ class _$SignInWithEmailAndPasswordPressed
     TResult Function(SignInWithEmailAndPasswordPressed value)?
         signInWithEmailAndPasswordPressed,
     TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult Function(SignInLocal value)? signInLocal,
     required TResult orElse(),
   }) {
     if (signInWithEmailAndPasswordPressed != null) {
@@ -764,6 +798,7 @@ class _$SignInWithGooglePressed implements SignInWithGooglePressed {
     required TResult Function() registerWithEmailAndPasswordPressed,
     required TResult Function() signInWithEmailAndPasswordPressed,
     required TResult Function() signInWithGooglePressed,
+    required TResult Function() signInLocal,
   }) {
     return signInWithGooglePressed();
   }
@@ -776,6 +811,7 @@ class _$SignInWithGooglePressed implements SignInWithGooglePressed {
     TResult Function()? registerWithEmailAndPasswordPressed,
     TResult Function()? signInWithEmailAndPasswordPressed,
     TResult Function()? signInWithGooglePressed,
+    TResult Function()? signInLocal,
   }) {
     return signInWithGooglePressed?.call();
   }
@@ -788,6 +824,7 @@ class _$SignInWithGooglePressed implements SignInWithGooglePressed {
     TResult Function()? registerWithEmailAndPasswordPressed,
     TResult Function()? signInWithEmailAndPasswordPressed,
     TResult Function()? signInWithGooglePressed,
+    TResult Function()? signInLocal,
     required TResult orElse(),
   }) {
     if (signInWithGooglePressed != null) {
@@ -807,6 +844,7 @@ class _$SignInWithGooglePressed implements SignInWithGooglePressed {
         signInWithEmailAndPasswordPressed,
     required TResult Function(SignInWithGooglePressed value)
         signInWithGooglePressed,
+    required TResult Function(SignInLocal value) signInLocal,
   }) {
     return signInWithGooglePressed(this);
   }
@@ -821,6 +859,7 @@ class _$SignInWithGooglePressed implements SignInWithGooglePressed {
     TResult Function(SignInWithEmailAndPasswordPressed value)?
         signInWithEmailAndPasswordPressed,
     TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult Function(SignInLocal value)? signInLocal,
   }) {
     return signInWithGooglePressed?.call(this);
   }
@@ -835,6 +874,7 @@ class _$SignInWithGooglePressed implements SignInWithGooglePressed {
     TResult Function(SignInWithEmailAndPasswordPressed value)?
         signInWithEmailAndPasswordPressed,
     TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult Function(SignInLocal value)? signInLocal,
     required TResult orElse(),
   }) {
     if (signInWithGooglePressed != null) {
@@ -849,6 +889,141 @@ abstract class SignInWithGooglePressed implements SignInFormEvent {
 }
 
 /// @nodoc
+abstract class $SignInLocalCopyWith<$Res> {
+  factory $SignInLocalCopyWith(
+          SignInLocal value, $Res Function(SignInLocal) then) =
+      _$SignInLocalCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$SignInLocalCopyWithImpl<$Res>
+    extends _$SignInFormEventCopyWithImpl<$Res>
+    implements $SignInLocalCopyWith<$Res> {
+  _$SignInLocalCopyWithImpl(
+      SignInLocal _value, $Res Function(SignInLocal) _then)
+      : super(_value, (v) => _then(v as SignInLocal));
+
+  @override
+  SignInLocal get _value => super._value as SignInLocal;
+}
+
+/// @nodoc
+
+class _$SignInLocal implements SignInLocal {
+  const _$SignInLocal();
+
+  @override
+  String toString() {
+    return 'SignInFormEvent.signInLocal()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is SignInLocal);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String emailStr) emailChanged,
+    required TResult Function(String passwordStr) passwordChanged,
+    required TResult Function() registerWithEmailAndPasswordPressed,
+    required TResult Function() signInWithEmailAndPasswordPressed,
+    required TResult Function() signInWithGooglePressed,
+    required TResult Function() signInLocal,
+  }) {
+    return signInLocal();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String emailStr)? emailChanged,
+    TResult Function(String passwordStr)? passwordChanged,
+    TResult Function()? registerWithEmailAndPasswordPressed,
+    TResult Function()? signInWithEmailAndPasswordPressed,
+    TResult Function()? signInWithGooglePressed,
+    TResult Function()? signInLocal,
+  }) {
+    return signInLocal?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String emailStr)? emailChanged,
+    TResult Function(String passwordStr)? passwordChanged,
+    TResult Function()? registerWithEmailAndPasswordPressed,
+    TResult Function()? signInWithEmailAndPasswordPressed,
+    TResult Function()? signInWithGooglePressed,
+    TResult Function()? signInLocal,
+    required TResult orElse(),
+  }) {
+    if (signInLocal != null) {
+      return signInLocal();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(EmailChanged value) emailChanged,
+    required TResult Function(PasswordChanged value) passwordChanged,
+    required TResult Function(RegisterWithEmailAndPasswordPressed value)
+        registerWithEmailAndPasswordPressed,
+    required TResult Function(SignInWithEmailAndPasswordPressed value)
+        signInWithEmailAndPasswordPressed,
+    required TResult Function(SignInWithGooglePressed value)
+        signInWithGooglePressed,
+    required TResult Function(SignInLocal value) signInLocal,
+  }) {
+    return signInLocal(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(RegisterWithEmailAndPasswordPressed value)?
+        registerWithEmailAndPasswordPressed,
+    TResult Function(SignInWithEmailAndPasswordPressed value)?
+        signInWithEmailAndPasswordPressed,
+    TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult Function(SignInLocal value)? signInLocal,
+  }) {
+    return signInLocal?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(RegisterWithEmailAndPasswordPressed value)?
+        registerWithEmailAndPasswordPressed,
+    TResult Function(SignInWithEmailAndPasswordPressed value)?
+        signInWithEmailAndPasswordPressed,
+    TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult Function(SignInLocal value)? signInLocal,
+    required TResult orElse(),
+  }) {
+    if (signInLocal != null) {
+      return signInLocal(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SignInLocal implements SignInFormEvent {
+  const factory SignInLocal() = _$SignInLocal;
+}
+
+/// @nodoc
 class _$SignInFormStateTearOff {
   const _$SignInFormStateTearOff();
 
@@ -857,13 +1032,15 @@ class _$SignInFormStateTearOff {
       required Password password,
       required bool showErrorMessages,
       required bool isSubmitting,
-      required Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption}) {
+      required Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption,
+      required Option<Either<AuthFailure, UserLocalModel>> authLocal}) {
     return _SignInFormState(
       emailAddress: emailAddress,
       password: password,
       showErrorMessages: showErrorMessages,
       isSubmitting: isSubmitting,
       authFailureOrSuccessOption: authFailureOrSuccessOption,
+      authLocal: authLocal,
     );
   }
 }
@@ -878,6 +1055,8 @@ mixin _$SignInFormState {
   bool get showErrorMessages => throw _privateConstructorUsedError;
   bool get isSubmitting => throw _privateConstructorUsedError;
   Option<Either<AuthFailure, Unit>> get authFailureOrSuccessOption =>
+      throw _privateConstructorUsedError;
+  Option<Either<AuthFailure, UserLocalModel>> get authLocal =>
       throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -895,7 +1074,8 @@ abstract class $SignInFormStateCopyWith<$Res> {
       Password password,
       bool showErrorMessages,
       bool isSubmitting,
-      Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption});
+      Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption,
+      Option<Either<AuthFailure, UserLocalModel>> authLocal});
 }
 
 /// @nodoc
@@ -914,6 +1094,7 @@ class _$SignInFormStateCopyWithImpl<$Res>
     Object? showErrorMessages = freezed,
     Object? isSubmitting = freezed,
     Object? authFailureOrSuccessOption = freezed,
+    Object? authLocal = freezed,
   }) {
     return _then(_value.copyWith(
       emailAddress: emailAddress == freezed
@@ -936,6 +1117,10 @@ class _$SignInFormStateCopyWithImpl<$Res>
           ? _value.authFailureOrSuccessOption
           : authFailureOrSuccessOption // ignore: cast_nullable_to_non_nullable
               as Option<Either<AuthFailure, Unit>>,
+      authLocal: authLocal == freezed
+          ? _value.authLocal
+          : authLocal // ignore: cast_nullable_to_non_nullable
+              as Option<Either<AuthFailure, UserLocalModel>>,
     ));
   }
 }
@@ -952,7 +1137,8 @@ abstract class _$SignInFormStateCopyWith<$Res>
       Password password,
       bool showErrorMessages,
       bool isSubmitting,
-      Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption});
+      Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption,
+      Option<Either<AuthFailure, UserLocalModel>> authLocal});
 }
 
 /// @nodoc
@@ -973,6 +1159,7 @@ class __$SignInFormStateCopyWithImpl<$Res>
     Object? showErrorMessages = freezed,
     Object? isSubmitting = freezed,
     Object? authFailureOrSuccessOption = freezed,
+    Object? authLocal = freezed,
   }) {
     return _then(_SignInFormState(
       emailAddress: emailAddress == freezed
@@ -995,6 +1182,10 @@ class __$SignInFormStateCopyWithImpl<$Res>
           ? _value.authFailureOrSuccessOption
           : authFailureOrSuccessOption // ignore: cast_nullable_to_non_nullable
               as Option<Either<AuthFailure, Unit>>,
+      authLocal: authLocal == freezed
+          ? _value.authLocal
+          : authLocal // ignore: cast_nullable_to_non_nullable
+              as Option<Either<AuthFailure, UserLocalModel>>,
     ));
   }
 }
@@ -1007,7 +1198,8 @@ class _$_SignInFormState implements _SignInFormState {
       required this.password,
       required this.showErrorMessages,
       required this.isSubmitting,
-      required this.authFailureOrSuccessOption});
+      required this.authFailureOrSuccessOption,
+      required this.authLocal});
 
   @override
   final Email emailAddress;
@@ -1019,10 +1211,12 @@ class _$_SignInFormState implements _SignInFormState {
   final bool isSubmitting;
   @override
   final Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption;
+  @override
+  final Option<Either<AuthFailure, UserLocalModel>> authLocal;
 
   @override
   String toString() {
-    return 'SignInFormState(emailAddress: $emailAddress, password: $password, showErrorMessages: $showErrorMessages, isSubmitting: $isSubmitting, authFailureOrSuccessOption: $authFailureOrSuccessOption)';
+    return 'SignInFormState(emailAddress: $emailAddress, password: $password, showErrorMessages: $showErrorMessages, isSubmitting: $isSubmitting, authFailureOrSuccessOption: $authFailureOrSuccessOption, authLocal: $authLocal)';
   }
 
   @override
@@ -1045,7 +1239,10 @@ class _$_SignInFormState implements _SignInFormState {
                     authFailureOrSuccessOption) ||
                 const DeepCollectionEquality().equals(
                     other.authFailureOrSuccessOption,
-                    authFailureOrSuccessOption)));
+                    authFailureOrSuccessOption)) &&
+            (identical(other.authLocal, authLocal) ||
+                const DeepCollectionEquality()
+                    .equals(other.authLocal, authLocal)));
   }
 
   @override
@@ -1055,7 +1252,8 @@ class _$_SignInFormState implements _SignInFormState {
       const DeepCollectionEquality().hash(password) ^
       const DeepCollectionEquality().hash(showErrorMessages) ^
       const DeepCollectionEquality().hash(isSubmitting) ^
-      const DeepCollectionEquality().hash(authFailureOrSuccessOption);
+      const DeepCollectionEquality().hash(authFailureOrSuccessOption) ^
+      const DeepCollectionEquality().hash(authLocal);
 
   @JsonKey(ignore: true)
   @override
@@ -1065,12 +1263,13 @@ class _$_SignInFormState implements _SignInFormState {
 
 abstract class _SignInFormState implements SignInFormState {
   const factory _SignInFormState(
-      {required Email emailAddress,
-      required Password password,
-      required bool showErrorMessages,
-      required bool isSubmitting,
-      required Option<Either<AuthFailure, Unit>>
-          authFailureOrSuccessOption}) = _$_SignInFormState;
+          {required Email emailAddress,
+          required Password password,
+          required bool showErrorMessages,
+          required bool isSubmitting,
+          required Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption,
+          required Option<Either<AuthFailure, UserLocalModel>> authLocal}) =
+      _$_SignInFormState;
 
   @override
   Email get emailAddress => throw _privateConstructorUsedError;
@@ -1082,6 +1281,9 @@ abstract class _SignInFormState implements SignInFormState {
   bool get isSubmitting => throw _privateConstructorUsedError;
   @override
   Option<Either<AuthFailure, Unit>> get authFailureOrSuccessOption =>
+      throw _privateConstructorUsedError;
+  @override
+  Option<Either<AuthFailure, UserLocalModel>> get authLocal =>
       throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)

@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:weather/presentation/sign_in/sign_in_page.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:weather/presentation/routers/routers.dart';
 
 class AppWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: 'Material App', home: SignInPage());
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Material App',
+      getPages: Routers().routers,
+      initialRoute: '/',
+    );
   }
 }

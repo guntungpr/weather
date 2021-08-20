@@ -4,6 +4,7 @@ import 'package:weather/domain/core/validators.dart';
 import 'package:weather/domain/core/value_objects.dart';
 
 class Email extends ValueObjects<String> {
+  @override
   final Either<ValueFailure<String>, String> value;
 
   factory Email(String input) {
@@ -15,6 +16,7 @@ class Email extends ValueObjects<String> {
 }
 
 class Password extends ValueObjects<String> {
+  @override
   final Either<ValueFailure<String>, String> value;
 
   factory Password(String input) {

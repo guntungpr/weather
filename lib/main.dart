@@ -4,6 +4,7 @@ import 'package:injectable/injectable.dart';
 import 'package:weather/injection.dart';
 import 'package:weather/presentation/core/app_widget.dart';
 
+// ignore: avoid_void_async
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   configurationInjection(Environment.prod);
