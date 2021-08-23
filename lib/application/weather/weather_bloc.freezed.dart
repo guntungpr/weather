@@ -329,22 +329,13 @@ class _$WeatherStateTearOff {
   const _$WeatherStateTearOff();
 
   _WeatherState call(
-      {required String city,
-      required String country,
-      required double lat,
-      required double long,
-      required String weather,
-      required String weatherDetail,
-      required double temp,
+      {required Option<Either<WeatherFailure, WeatherModel>>
+          optionFailureOrSuccess,
+      required String city,
       required bool isLoading}) {
     return _WeatherState(
+      optionFailureOrSuccess: optionFailureOrSuccess,
       city: city,
-      country: country,
-      lat: lat,
-      long: long,
-      weather: weather,
-      weatherDetail: weatherDetail,
-      temp: temp,
       isLoading: isLoading,
     );
   }
@@ -355,13 +346,9 @@ const $WeatherState = _$WeatherStateTearOff();
 
 /// @nodoc
 mixin _$WeatherState {
+  Option<Either<WeatherFailure, WeatherModel>> get optionFailureOrSuccess =>
+      throw _privateConstructorUsedError;
   String get city => throw _privateConstructorUsedError;
-  String get country => throw _privateConstructorUsedError;
-  double get lat => throw _privateConstructorUsedError;
-  double get long => throw _privateConstructorUsedError;
-  String get weather => throw _privateConstructorUsedError;
-  String get weatherDetail => throw _privateConstructorUsedError;
-  double get temp => throw _privateConstructorUsedError;
   bool get isLoading => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -375,13 +362,8 @@ abstract class $WeatherStateCopyWith<$Res> {
           WeatherState value, $Res Function(WeatherState) then) =
       _$WeatherStateCopyWithImpl<$Res>;
   $Res call(
-      {String city,
-      String country,
-      double lat,
-      double long,
-      String weather,
-      String weatherDetail,
-      double temp,
+      {Option<Either<WeatherFailure, WeatherModel>> optionFailureOrSuccess,
+      String city,
       bool isLoading});
 }
 
@@ -395,44 +377,19 @@ class _$WeatherStateCopyWithImpl<$Res> implements $WeatherStateCopyWith<$Res> {
 
   @override
   $Res call({
+    Object? optionFailureOrSuccess = freezed,
     Object? city = freezed,
-    Object? country = freezed,
-    Object? lat = freezed,
-    Object? long = freezed,
-    Object? weather = freezed,
-    Object? weatherDetail = freezed,
-    Object? temp = freezed,
     Object? isLoading = freezed,
   }) {
     return _then(_value.copyWith(
+      optionFailureOrSuccess: optionFailureOrSuccess == freezed
+          ? _value.optionFailureOrSuccess
+          : optionFailureOrSuccess // ignore: cast_nullable_to_non_nullable
+              as Option<Either<WeatherFailure, WeatherModel>>,
       city: city == freezed
           ? _value.city
           : city // ignore: cast_nullable_to_non_nullable
               as String,
-      country: country == freezed
-          ? _value.country
-          : country // ignore: cast_nullable_to_non_nullable
-              as String,
-      lat: lat == freezed
-          ? _value.lat
-          : lat // ignore: cast_nullable_to_non_nullable
-              as double,
-      long: long == freezed
-          ? _value.long
-          : long // ignore: cast_nullable_to_non_nullable
-              as double,
-      weather: weather == freezed
-          ? _value.weather
-          : weather // ignore: cast_nullable_to_non_nullable
-              as String,
-      weatherDetail: weatherDetail == freezed
-          ? _value.weatherDetail
-          : weatherDetail // ignore: cast_nullable_to_non_nullable
-              as String,
-      temp: temp == freezed
-          ? _value.temp
-          : temp // ignore: cast_nullable_to_non_nullable
-              as double,
       isLoading: isLoading == freezed
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
@@ -449,13 +406,8 @@ abstract class _$WeatherStateCopyWith<$Res>
       __$WeatherStateCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String city,
-      String country,
-      double lat,
-      double long,
-      String weather,
-      String weatherDetail,
-      double temp,
+      {Option<Either<WeatherFailure, WeatherModel>> optionFailureOrSuccess,
+      String city,
       bool isLoading});
 }
 
@@ -471,44 +423,19 @@ class __$WeatherStateCopyWithImpl<$Res> extends _$WeatherStateCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? optionFailureOrSuccess = freezed,
     Object? city = freezed,
-    Object? country = freezed,
-    Object? lat = freezed,
-    Object? long = freezed,
-    Object? weather = freezed,
-    Object? weatherDetail = freezed,
-    Object? temp = freezed,
     Object? isLoading = freezed,
   }) {
     return _then(_WeatherState(
+      optionFailureOrSuccess: optionFailureOrSuccess == freezed
+          ? _value.optionFailureOrSuccess
+          : optionFailureOrSuccess // ignore: cast_nullable_to_non_nullable
+              as Option<Either<WeatherFailure, WeatherModel>>,
       city: city == freezed
           ? _value.city
           : city // ignore: cast_nullable_to_non_nullable
               as String,
-      country: country == freezed
-          ? _value.country
-          : country // ignore: cast_nullable_to_non_nullable
-              as String,
-      lat: lat == freezed
-          ? _value.lat
-          : lat // ignore: cast_nullable_to_non_nullable
-              as double,
-      long: long == freezed
-          ? _value.long
-          : long // ignore: cast_nullable_to_non_nullable
-              as double,
-      weather: weather == freezed
-          ? _value.weather
-          : weather // ignore: cast_nullable_to_non_nullable
-              as String,
-      weatherDetail: weatherDetail == freezed
-          ? _value.weatherDetail
-          : weatherDetail // ignore: cast_nullable_to_non_nullable
-              as String,
-      temp: temp == freezed
-          ? _value.temp
-          : temp // ignore: cast_nullable_to_non_nullable
-              as double,
       isLoading: isLoading == freezed
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
@@ -521,58 +448,31 @@ class __$WeatherStateCopyWithImpl<$Res> extends _$WeatherStateCopyWithImpl<$Res>
 
 class _$_WeatherState implements _WeatherState {
   const _$_WeatherState(
-      {required this.city,
-      required this.country,
-      required this.lat,
-      required this.long,
-      required this.weather,
-      required this.weatherDetail,
-      required this.temp,
+      {required this.optionFailureOrSuccess,
+      required this.city,
       required this.isLoading});
 
   @override
+  final Option<Either<WeatherFailure, WeatherModel>> optionFailureOrSuccess;
+  @override
   final String city;
-  @override
-  final String country;
-  @override
-  final double lat;
-  @override
-  final double long;
-  @override
-  final String weather;
-  @override
-  final String weatherDetail;
-  @override
-  final double temp;
   @override
   final bool isLoading;
 
   @override
   String toString() {
-    return 'WeatherState(city: $city, country: $country, lat: $lat, long: $long, weather: $weather, weatherDetail: $weatherDetail, temp: $temp, isLoading: $isLoading)';
+    return 'WeatherState(optionFailureOrSuccess: $optionFailureOrSuccess, city: $city, isLoading: $isLoading)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _WeatherState &&
+            (identical(other.optionFailureOrSuccess, optionFailureOrSuccess) ||
+                const DeepCollectionEquality().equals(
+                    other.optionFailureOrSuccess, optionFailureOrSuccess)) &&
             (identical(other.city, city) ||
                 const DeepCollectionEquality().equals(other.city, city)) &&
-            (identical(other.country, country) ||
-                const DeepCollectionEquality()
-                    .equals(other.country, country)) &&
-            (identical(other.lat, lat) ||
-                const DeepCollectionEquality().equals(other.lat, lat)) &&
-            (identical(other.long, long) ||
-                const DeepCollectionEquality().equals(other.long, long)) &&
-            (identical(other.weather, weather) ||
-                const DeepCollectionEquality()
-                    .equals(other.weather, weather)) &&
-            (identical(other.weatherDetail, weatherDetail) ||
-                const DeepCollectionEquality()
-                    .equals(other.weatherDetail, weatherDetail)) &&
-            (identical(other.temp, temp) ||
-                const DeepCollectionEquality().equals(other.temp, temp)) &&
             (identical(other.isLoading, isLoading) ||
                 const DeepCollectionEquality()
                     .equals(other.isLoading, isLoading)));
@@ -581,13 +481,8 @@ class _$_WeatherState implements _WeatherState {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(optionFailureOrSuccess) ^
       const DeepCollectionEquality().hash(city) ^
-      const DeepCollectionEquality().hash(country) ^
-      const DeepCollectionEquality().hash(lat) ^
-      const DeepCollectionEquality().hash(long) ^
-      const DeepCollectionEquality().hash(weather) ^
-      const DeepCollectionEquality().hash(weatherDetail) ^
-      const DeepCollectionEquality().hash(temp) ^
       const DeepCollectionEquality().hash(isLoading);
 
   @JsonKey(ignore: true)
@@ -598,29 +493,16 @@ class _$_WeatherState implements _WeatherState {
 
 abstract class _WeatherState implements WeatherState {
   const factory _WeatherState(
-      {required String city,
-      required String country,
-      required double lat,
-      required double long,
-      required String weather,
-      required String weatherDetail,
-      required double temp,
+      {required Option<Either<WeatherFailure, WeatherModel>>
+          optionFailureOrSuccess,
+      required String city,
       required bool isLoading}) = _$_WeatherState;
 
   @override
+  Option<Either<WeatherFailure, WeatherModel>> get optionFailureOrSuccess =>
+      throw _privateConstructorUsedError;
+  @override
   String get city => throw _privateConstructorUsedError;
-  @override
-  String get country => throw _privateConstructorUsedError;
-  @override
-  double get lat => throw _privateConstructorUsedError;
-  @override
-  double get long => throw _privateConstructorUsedError;
-  @override
-  String get weather => throw _privateConstructorUsedError;
-  @override
-  String get weatherDetail => throw _privateConstructorUsedError;
-  @override
-  double get temp => throw _privateConstructorUsedError;
   @override
   bool get isLoading => throw _privateConstructorUsedError;
   @override

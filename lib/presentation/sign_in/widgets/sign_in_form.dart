@@ -159,6 +159,14 @@ class SignInForm extends StatelessWidget {
                   ),
                 ],
               ),
+              const SizedBox(height: 10),
+              ElevatedButton(
+                onPressed: () => bloc.add(
+                  const SignInFormEvent.signInWithGooglePressed(),
+                ),
+                child: const Text("Sign In Google Account"),
+              ),
+              const SizedBox(height: 30),
               ElevatedButton(
                 onPressed: () => bloc.add(
                   const SignInFormEvent.signInLocal(),

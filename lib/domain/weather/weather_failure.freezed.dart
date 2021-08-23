@@ -17,14 +17,6 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$WeatherFailureTearOff {
   const _$WeatherFailureTearOff();
 
-  _NoData noData() {
-    return const _NoData();
-  }
-
-  _NoInternet noInternet() {
-    return const _NoInternet();
-  }
-
   _Failed failed() {
     return const _Failed();
   }
@@ -37,44 +29,32 @@ const $WeatherFailure = _$WeatherFailureTearOff();
 mixin _$WeatherFailure {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() noData,
-    required TResult Function() noInternet,
     required TResult Function() failed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? noData,
-    TResult Function()? noInternet,
     TResult Function()? failed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? noData,
-    TResult Function()? noInternet,
     TResult Function()? failed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_NoData value) noData,
-    required TResult Function(_NoInternet value) noInternet,
     required TResult Function(_Failed value) failed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_NoData value)? noData,
-    TResult Function(_NoInternet value)? noInternet,
     TResult Function(_Failed value)? failed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_NoData value)? noData,
-    TResult Function(_NoInternet value)? noInternet,
     TResult Function(_Failed value)? failed,
     required TResult orElse(),
   }) =>
@@ -96,222 +76,6 @@ class _$WeatherFailureCopyWithImpl<$Res>
   final WeatherFailure _value;
   // ignore: unused_field
   final $Res Function(WeatherFailure) _then;
-}
-
-/// @nodoc
-abstract class _$NoDataCopyWith<$Res> {
-  factory _$NoDataCopyWith(_NoData value, $Res Function(_NoData) then) =
-      __$NoDataCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$NoDataCopyWithImpl<$Res> extends _$WeatherFailureCopyWithImpl<$Res>
-    implements _$NoDataCopyWith<$Res> {
-  __$NoDataCopyWithImpl(_NoData _value, $Res Function(_NoData) _then)
-      : super(_value, (v) => _then(v as _NoData));
-
-  @override
-  _NoData get _value => super._value as _NoData;
-}
-
-/// @nodoc
-
-class _$_NoData implements _NoData {
-  const _$_NoData();
-
-  @override
-  String toString() {
-    return 'WeatherFailure.noData()';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _NoData);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() noData,
-    required TResult Function() noInternet,
-    required TResult Function() failed,
-  }) {
-    return noData();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? noData,
-    TResult Function()? noInternet,
-    TResult Function()? failed,
-  }) {
-    return noData?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? noData,
-    TResult Function()? noInternet,
-    TResult Function()? failed,
-    required TResult orElse(),
-  }) {
-    if (noData != null) {
-      return noData();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_NoData value) noData,
-    required TResult Function(_NoInternet value) noInternet,
-    required TResult Function(_Failed value) failed,
-  }) {
-    return noData(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_NoData value)? noData,
-    TResult Function(_NoInternet value)? noInternet,
-    TResult Function(_Failed value)? failed,
-  }) {
-    return noData?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_NoData value)? noData,
-    TResult Function(_NoInternet value)? noInternet,
-    TResult Function(_Failed value)? failed,
-    required TResult orElse(),
-  }) {
-    if (noData != null) {
-      return noData(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _NoData implements WeatherFailure {
-  const factory _NoData() = _$_NoData;
-}
-
-/// @nodoc
-abstract class _$NoInternetCopyWith<$Res> {
-  factory _$NoInternetCopyWith(
-          _NoInternet value, $Res Function(_NoInternet) then) =
-      __$NoInternetCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$NoInternetCopyWithImpl<$Res> extends _$WeatherFailureCopyWithImpl<$Res>
-    implements _$NoInternetCopyWith<$Res> {
-  __$NoInternetCopyWithImpl(
-      _NoInternet _value, $Res Function(_NoInternet) _then)
-      : super(_value, (v) => _then(v as _NoInternet));
-
-  @override
-  _NoInternet get _value => super._value as _NoInternet;
-}
-
-/// @nodoc
-
-class _$_NoInternet implements _NoInternet {
-  const _$_NoInternet();
-
-  @override
-  String toString() {
-    return 'WeatherFailure.noInternet()';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _NoInternet);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() noData,
-    required TResult Function() noInternet,
-    required TResult Function() failed,
-  }) {
-    return noInternet();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? noData,
-    TResult Function()? noInternet,
-    TResult Function()? failed,
-  }) {
-    return noInternet?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? noData,
-    TResult Function()? noInternet,
-    TResult Function()? failed,
-    required TResult orElse(),
-  }) {
-    if (noInternet != null) {
-      return noInternet();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_NoData value) noData,
-    required TResult Function(_NoInternet value) noInternet,
-    required TResult Function(_Failed value) failed,
-  }) {
-    return noInternet(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_NoData value)? noData,
-    TResult Function(_NoInternet value)? noInternet,
-    TResult Function(_Failed value)? failed,
-  }) {
-    return noInternet?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_NoData value)? noData,
-    TResult Function(_NoInternet value)? noInternet,
-    TResult Function(_Failed value)? failed,
-    required TResult orElse(),
-  }) {
-    if (noInternet != null) {
-      return noInternet(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _NoInternet implements WeatherFailure {
-  const factory _NoInternet() = _$_NoInternet;
 }
 
 /// @nodoc
@@ -351,8 +115,6 @@ class _$_Failed implements _Failed {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() noData,
-    required TResult Function() noInternet,
     required TResult Function() failed,
   }) {
     return failed();
@@ -361,8 +123,6 @@ class _$_Failed implements _Failed {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? noData,
-    TResult Function()? noInternet,
     TResult Function()? failed,
   }) {
     return failed?.call();
@@ -371,8 +131,6 @@ class _$_Failed implements _Failed {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? noData,
-    TResult Function()? noInternet,
     TResult Function()? failed,
     required TResult orElse(),
   }) {
@@ -385,8 +143,6 @@ class _$_Failed implements _Failed {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_NoData value) noData,
-    required TResult Function(_NoInternet value) noInternet,
     required TResult Function(_Failed value) failed,
   }) {
     return failed(this);
@@ -395,8 +151,6 @@ class _$_Failed implements _Failed {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_NoData value)? noData,
-    TResult Function(_NoInternet value)? noInternet,
     TResult Function(_Failed value)? failed,
   }) {
     return failed?.call(this);
@@ -405,8 +159,6 @@ class _$_Failed implements _Failed {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_NoData value)? noData,
-    TResult Function(_NoInternet value)? noInternet,
     TResult Function(_Failed value)? failed,
     required TResult orElse(),
   }) {
