@@ -6,7 +6,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:weather/domain/auth/auth_failure.dart';
 import 'package:weather/domain/auth/i_auth_facade.dart';
-import 'package:weather/domain/auth/value_objects.dart';
+import 'package:weather/domain/auth/value_objects_auth.dart';
 import 'package:weather/infrastructure/auth/user_local_model.dart';
 
 part 'sign_in_form_event.dart';

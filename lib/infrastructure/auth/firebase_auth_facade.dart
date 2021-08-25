@@ -4,7 +4,7 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:injectable/injectable.dart';
 import 'package:weather/domain/auth/auth_failure.dart';
 import 'package:weather/domain/auth/i_auth_facade.dart';
-import 'package:weather/domain/auth/value_objects.dart';
+import 'package:weather/domain/auth/value_objects_auth.dart';
 import 'package:weather/domain/core/i_network_service.dart';
 import 'package:weather/infrastructure/auth/user_local_model.dart';
 

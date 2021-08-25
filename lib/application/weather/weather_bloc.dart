@@ -5,6 +5,7 @@ import 'package:dartz/dartz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:weather/domain/weather/i_weather.dart';
+import 'package:weather/domain/weather/value_objects_weather.dart';
 import 'package:weather/domain/weather/weather_failure.dart';
 import 'package:weather/infrastructure/weather/weather_model.dart';
 
@@ -31,6 +32,12 @@ class WeatherBloc extends Bloc<WeatherEvent, WeatherState> {
         yield state.copyWith(
           optionFailureOrSuccess: some(failureOrSuccess),
           isLoading: false,
+        );
+      },
+      calculateTemp: (e) async* {
+        yield state.copyWith(
+          kelvinToCelcius: KelvinToCelcius(e.temp),
+          getDateTime: GetDateTimeNow(),
         );
       },
     );

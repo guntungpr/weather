@@ -26,6 +26,12 @@ class _$WeatherEventTearOff {
   SearchWeather searchWeather() {
     return const SearchWeather();
   }
+
+  CalculateTemp calculateTemp(double temp) {
+    return CalculateTemp(
+      temp,
+    );
+  }
 }
 
 /// @nodoc
@@ -37,18 +43,21 @@ mixin _$WeatherEvent {
   TResult when<TResult extends Object?>({
     required TResult Function(String inputCity) inputCity,
     required TResult Function() searchWeather,
+    required TResult Function(double temp) calculateTemp,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(String inputCity)? inputCity,
     TResult Function()? searchWeather,
+    TResult Function(double temp)? calculateTemp,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String inputCity)? inputCity,
     TResult Function()? searchWeather,
+    TResult Function(double temp)? calculateTemp,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -56,18 +65,21 @@ mixin _$WeatherEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(InputCity value) inputCity,
     required TResult Function(SearchWeather value) searchWeather,
+    required TResult Function(CalculateTemp value) calculateTemp,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(InputCity value)? inputCity,
     TResult Function(SearchWeather value)? searchWeather,
+    TResult Function(CalculateTemp value)? calculateTemp,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(InputCity value)? inputCity,
     TResult Function(SearchWeather value)? searchWeather,
+    TResult Function(CalculateTemp value)? calculateTemp,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -154,6 +166,7 @@ class _$InputCity implements InputCity {
   TResult when<TResult extends Object?>({
     required TResult Function(String inputCity) inputCity,
     required TResult Function() searchWeather,
+    required TResult Function(double temp) calculateTemp,
   }) {
     return inputCity(this.inputCity);
   }
@@ -163,6 +176,7 @@ class _$InputCity implements InputCity {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(String inputCity)? inputCity,
     TResult Function()? searchWeather,
+    TResult Function(double temp)? calculateTemp,
   }) {
     return inputCity?.call(this.inputCity);
   }
@@ -172,6 +186,7 @@ class _$InputCity implements InputCity {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String inputCity)? inputCity,
     TResult Function()? searchWeather,
+    TResult Function(double temp)? calculateTemp,
     required TResult orElse(),
   }) {
     if (inputCity != null) {
@@ -185,6 +200,7 @@ class _$InputCity implements InputCity {
   TResult map<TResult extends Object?>({
     required TResult Function(InputCity value) inputCity,
     required TResult Function(SearchWeather value) searchWeather,
+    required TResult Function(CalculateTemp value) calculateTemp,
   }) {
     return inputCity(this);
   }
@@ -194,6 +210,7 @@ class _$InputCity implements InputCity {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(InputCity value)? inputCity,
     TResult Function(SearchWeather value)? searchWeather,
+    TResult Function(CalculateTemp value)? calculateTemp,
   }) {
     return inputCity?.call(this);
   }
@@ -203,6 +220,7 @@ class _$InputCity implements InputCity {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(InputCity value)? inputCity,
     TResult Function(SearchWeather value)? searchWeather,
+    TResult Function(CalculateTemp value)? calculateTemp,
     required TResult orElse(),
   }) {
     if (inputCity != null) {
@@ -262,6 +280,7 @@ class _$SearchWeather implements SearchWeather {
   TResult when<TResult extends Object?>({
     required TResult Function(String inputCity) inputCity,
     required TResult Function() searchWeather,
+    required TResult Function(double temp) calculateTemp,
   }) {
     return searchWeather();
   }
@@ -271,6 +290,7 @@ class _$SearchWeather implements SearchWeather {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(String inputCity)? inputCity,
     TResult Function()? searchWeather,
+    TResult Function(double temp)? calculateTemp,
   }) {
     return searchWeather?.call();
   }
@@ -280,6 +300,7 @@ class _$SearchWeather implements SearchWeather {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String inputCity)? inputCity,
     TResult Function()? searchWeather,
+    TResult Function(double temp)? calculateTemp,
     required TResult orElse(),
   }) {
     if (searchWeather != null) {
@@ -293,6 +314,7 @@ class _$SearchWeather implements SearchWeather {
   TResult map<TResult extends Object?>({
     required TResult Function(InputCity value) inputCity,
     required TResult Function(SearchWeather value) searchWeather,
+    required TResult Function(CalculateTemp value) calculateTemp,
   }) {
     return searchWeather(this);
   }
@@ -302,6 +324,7 @@ class _$SearchWeather implements SearchWeather {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(InputCity value)? inputCity,
     TResult Function(SearchWeather value)? searchWeather,
+    TResult Function(CalculateTemp value)? calculateTemp,
   }) {
     return searchWeather?.call(this);
   }
@@ -311,6 +334,7 @@ class _$SearchWeather implements SearchWeather {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(InputCity value)? inputCity,
     TResult Function(SearchWeather value)? searchWeather,
+    TResult Function(CalculateTemp value)? calculateTemp,
     required TResult orElse(),
   }) {
     if (searchWeather != null) {
@@ -325,6 +349,145 @@ abstract class SearchWeather implements WeatherEvent {
 }
 
 /// @nodoc
+abstract class $CalculateTempCopyWith<$Res> {
+  factory $CalculateTempCopyWith(
+          CalculateTemp value, $Res Function(CalculateTemp) then) =
+      _$CalculateTempCopyWithImpl<$Res>;
+  $Res call({double temp});
+}
+
+/// @nodoc
+class _$CalculateTempCopyWithImpl<$Res> extends _$WeatherEventCopyWithImpl<$Res>
+    implements $CalculateTempCopyWith<$Res> {
+  _$CalculateTempCopyWithImpl(
+      CalculateTemp _value, $Res Function(CalculateTemp) _then)
+      : super(_value, (v) => _then(v as CalculateTemp));
+
+  @override
+  CalculateTemp get _value => super._value as CalculateTemp;
+
+  @override
+  $Res call({
+    Object? temp = freezed,
+  }) {
+    return _then(CalculateTemp(
+      temp == freezed
+          ? _value.temp
+          : temp // ignore: cast_nullable_to_non_nullable
+              as double,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$CalculateTemp implements CalculateTemp {
+  const _$CalculateTemp(this.temp);
+
+  @override
+  final double temp;
+
+  @override
+  String toString() {
+    return 'WeatherEvent.calculateTemp(temp: $temp)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is CalculateTemp &&
+            (identical(other.temp, temp) ||
+                const DeepCollectionEquality().equals(other.temp, temp)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(temp);
+
+  @JsonKey(ignore: true)
+  @override
+  $CalculateTempCopyWith<CalculateTemp> get copyWith =>
+      _$CalculateTempCopyWithImpl<CalculateTemp>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String inputCity) inputCity,
+    required TResult Function() searchWeather,
+    required TResult Function(double temp) calculateTemp,
+  }) {
+    return calculateTemp(temp);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String inputCity)? inputCity,
+    TResult Function()? searchWeather,
+    TResult Function(double temp)? calculateTemp,
+  }) {
+    return calculateTemp?.call(temp);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String inputCity)? inputCity,
+    TResult Function()? searchWeather,
+    TResult Function(double temp)? calculateTemp,
+    required TResult orElse(),
+  }) {
+    if (calculateTemp != null) {
+      return calculateTemp(temp);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(InputCity value) inputCity,
+    required TResult Function(SearchWeather value) searchWeather,
+    required TResult Function(CalculateTemp value) calculateTemp,
+  }) {
+    return calculateTemp(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(InputCity value)? inputCity,
+    TResult Function(SearchWeather value)? searchWeather,
+    TResult Function(CalculateTemp value)? calculateTemp,
+  }) {
+    return calculateTemp?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(InputCity value)? inputCity,
+    TResult Function(SearchWeather value)? searchWeather,
+    TResult Function(CalculateTemp value)? calculateTemp,
+    required TResult orElse(),
+  }) {
+    if (calculateTemp != null) {
+      return calculateTemp(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CalculateTemp implements WeatherEvent {
+  const factory CalculateTemp(double temp) = _$CalculateTemp;
+
+  double get temp => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CalculateTempCopyWith<CalculateTemp> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 class _$WeatherStateTearOff {
   const _$WeatherStateTearOff();
 
@@ -332,11 +495,15 @@ class _$WeatherStateTearOff {
       {required Option<Either<WeatherFailure, WeatherModel>>
           optionFailureOrSuccess,
       required String city,
-      required bool isLoading}) {
+      required bool isLoading,
+      required KelvinToCelcius kelvinToCelcius,
+      required GetDateTimeNow getDateTime}) {
     return _WeatherState(
       optionFailureOrSuccess: optionFailureOrSuccess,
       city: city,
       isLoading: isLoading,
+      kelvinToCelcius: kelvinToCelcius,
+      getDateTime: getDateTime,
     );
   }
 }
@@ -350,6 +517,8 @@ mixin _$WeatherState {
       throw _privateConstructorUsedError;
   String get city => throw _privateConstructorUsedError;
   bool get isLoading => throw _privateConstructorUsedError;
+  KelvinToCelcius get kelvinToCelcius => throw _privateConstructorUsedError;
+  GetDateTimeNow get getDateTime => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $WeatherStateCopyWith<WeatherState> get copyWith =>
@@ -364,7 +533,9 @@ abstract class $WeatherStateCopyWith<$Res> {
   $Res call(
       {Option<Either<WeatherFailure, WeatherModel>> optionFailureOrSuccess,
       String city,
-      bool isLoading});
+      bool isLoading,
+      KelvinToCelcius kelvinToCelcius,
+      GetDateTimeNow getDateTime});
 }
 
 /// @nodoc
@@ -380,6 +551,8 @@ class _$WeatherStateCopyWithImpl<$Res> implements $WeatherStateCopyWith<$Res> {
     Object? optionFailureOrSuccess = freezed,
     Object? city = freezed,
     Object? isLoading = freezed,
+    Object? kelvinToCelcius = freezed,
+    Object? getDateTime = freezed,
   }) {
     return _then(_value.copyWith(
       optionFailureOrSuccess: optionFailureOrSuccess == freezed
@@ -394,6 +567,14 @@ class _$WeatherStateCopyWithImpl<$Res> implements $WeatherStateCopyWith<$Res> {
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
               as bool,
+      kelvinToCelcius: kelvinToCelcius == freezed
+          ? _value.kelvinToCelcius
+          : kelvinToCelcius // ignore: cast_nullable_to_non_nullable
+              as KelvinToCelcius,
+      getDateTime: getDateTime == freezed
+          ? _value.getDateTime
+          : getDateTime // ignore: cast_nullable_to_non_nullable
+              as GetDateTimeNow,
     ));
   }
 }
@@ -408,7 +589,9 @@ abstract class _$WeatherStateCopyWith<$Res>
   $Res call(
       {Option<Either<WeatherFailure, WeatherModel>> optionFailureOrSuccess,
       String city,
-      bool isLoading});
+      bool isLoading,
+      KelvinToCelcius kelvinToCelcius,
+      GetDateTimeNow getDateTime});
 }
 
 /// @nodoc
@@ -426,6 +609,8 @@ class __$WeatherStateCopyWithImpl<$Res> extends _$WeatherStateCopyWithImpl<$Res>
     Object? optionFailureOrSuccess = freezed,
     Object? city = freezed,
     Object? isLoading = freezed,
+    Object? kelvinToCelcius = freezed,
+    Object? getDateTime = freezed,
   }) {
     return _then(_WeatherState(
       optionFailureOrSuccess: optionFailureOrSuccess == freezed
@@ -440,6 +625,14 @@ class __$WeatherStateCopyWithImpl<$Res> extends _$WeatherStateCopyWithImpl<$Res>
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
               as bool,
+      kelvinToCelcius: kelvinToCelcius == freezed
+          ? _value.kelvinToCelcius
+          : kelvinToCelcius // ignore: cast_nullable_to_non_nullable
+              as KelvinToCelcius,
+      getDateTime: getDateTime == freezed
+          ? _value.getDateTime
+          : getDateTime // ignore: cast_nullable_to_non_nullable
+              as GetDateTimeNow,
     ));
   }
 }
@@ -450,7 +643,9 @@ class _$_WeatherState implements _WeatherState {
   const _$_WeatherState(
       {required this.optionFailureOrSuccess,
       required this.city,
-      required this.isLoading});
+      required this.isLoading,
+      required this.kelvinToCelcius,
+      required this.getDateTime});
 
   @override
   final Option<Either<WeatherFailure, WeatherModel>> optionFailureOrSuccess;
@@ -458,10 +653,14 @@ class _$_WeatherState implements _WeatherState {
   final String city;
   @override
   final bool isLoading;
+  @override
+  final KelvinToCelcius kelvinToCelcius;
+  @override
+  final GetDateTimeNow getDateTime;
 
   @override
   String toString() {
-    return 'WeatherState(optionFailureOrSuccess: $optionFailureOrSuccess, city: $city, isLoading: $isLoading)';
+    return 'WeatherState(optionFailureOrSuccess: $optionFailureOrSuccess, city: $city, isLoading: $isLoading, kelvinToCelcius: $kelvinToCelcius, getDateTime: $getDateTime)';
   }
 
   @override
@@ -475,7 +674,13 @@ class _$_WeatherState implements _WeatherState {
                 const DeepCollectionEquality().equals(other.city, city)) &&
             (identical(other.isLoading, isLoading) ||
                 const DeepCollectionEquality()
-                    .equals(other.isLoading, isLoading)));
+                    .equals(other.isLoading, isLoading)) &&
+            (identical(other.kelvinToCelcius, kelvinToCelcius) ||
+                const DeepCollectionEquality()
+                    .equals(other.kelvinToCelcius, kelvinToCelcius)) &&
+            (identical(other.getDateTime, getDateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.getDateTime, getDateTime)));
   }
 
   @override
@@ -483,7 +688,9 @@ class _$_WeatherState implements _WeatherState {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(optionFailureOrSuccess) ^
       const DeepCollectionEquality().hash(city) ^
-      const DeepCollectionEquality().hash(isLoading);
+      const DeepCollectionEquality().hash(isLoading) ^
+      const DeepCollectionEquality().hash(kelvinToCelcius) ^
+      const DeepCollectionEquality().hash(getDateTime);
 
   @JsonKey(ignore: true)
   @override
@@ -496,7 +703,9 @@ abstract class _WeatherState implements WeatherState {
       {required Option<Either<WeatherFailure, WeatherModel>>
           optionFailureOrSuccess,
       required String city,
-      required bool isLoading}) = _$_WeatherState;
+      required bool isLoading,
+      required KelvinToCelcius kelvinToCelcius,
+      required GetDateTimeNow getDateTime}) = _$_WeatherState;
 
   @override
   Option<Either<WeatherFailure, WeatherModel>> get optionFailureOrSuccess =>
@@ -505,6 +714,10 @@ abstract class _WeatherState implements WeatherState {
   String get city => throw _privateConstructorUsedError;
   @override
   bool get isLoading => throw _privateConstructorUsedError;
+  @override
+  KelvinToCelcius get kelvinToCelcius => throw _privateConstructorUsedError;
+  @override
+  GetDateTimeNow get getDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$WeatherStateCopyWith<_WeatherState> get copyWith =>

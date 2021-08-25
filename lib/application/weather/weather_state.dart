@@ -7,11 +7,15 @@ abstract class WeatherState with _$WeatherState {
         optionFailureOrSuccess,
     required String city,
     required bool isLoading,
+    required KelvinToCelcius kelvinToCelcius,
+    required GetDateTimeNow getDateTime,
   }) = _WeatherState;
 
   factory WeatherState.initial() => WeatherState(
         optionFailureOrSuccess: none(),
         city: '',
         isLoading: false,
+        kelvinToCelcius: KelvinToCelcius(0),
+        getDateTime: GetDateTimeNow(),
       );
 }
