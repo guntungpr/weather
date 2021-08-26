@@ -37,7 +37,6 @@ class WeatherBloc extends Bloc<WeatherEvent, WeatherState> {
       calculateTemp: (e) async* {
         yield state.copyWith(
           kelvinToCelcius: KelvinToCelcius(e.temp),
-          getDateTime: GetDateTimeNow(),
         );
       },
     );

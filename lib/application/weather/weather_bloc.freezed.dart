@@ -496,14 +496,12 @@ class _$WeatherStateTearOff {
           optionFailureOrSuccess,
       required String city,
       required bool isLoading,
-      required KelvinToCelcius kelvinToCelcius,
-      required GetDateTimeNow getDateTime}) {
+      required KelvinToCelcius kelvinToCelcius}) {
     return _WeatherState(
       optionFailureOrSuccess: optionFailureOrSuccess,
       city: city,
       isLoading: isLoading,
       kelvinToCelcius: kelvinToCelcius,
-      getDateTime: getDateTime,
     );
   }
 }
@@ -518,7 +516,6 @@ mixin _$WeatherState {
   String get city => throw _privateConstructorUsedError;
   bool get isLoading => throw _privateConstructorUsedError;
   KelvinToCelcius get kelvinToCelcius => throw _privateConstructorUsedError;
-  GetDateTimeNow get getDateTime => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $WeatherStateCopyWith<WeatherState> get copyWith =>
@@ -534,8 +531,7 @@ abstract class $WeatherStateCopyWith<$Res> {
       {Option<Either<WeatherFailure, WeatherModel>> optionFailureOrSuccess,
       String city,
       bool isLoading,
-      KelvinToCelcius kelvinToCelcius,
-      GetDateTimeNow getDateTime});
+      KelvinToCelcius kelvinToCelcius});
 }
 
 /// @nodoc
@@ -552,7 +548,6 @@ class _$WeatherStateCopyWithImpl<$Res> implements $WeatherStateCopyWith<$Res> {
     Object? city = freezed,
     Object? isLoading = freezed,
     Object? kelvinToCelcius = freezed,
-    Object? getDateTime = freezed,
   }) {
     return _then(_value.copyWith(
       optionFailureOrSuccess: optionFailureOrSuccess == freezed
@@ -571,10 +566,6 @@ class _$WeatherStateCopyWithImpl<$Res> implements $WeatherStateCopyWith<$Res> {
           ? _value.kelvinToCelcius
           : kelvinToCelcius // ignore: cast_nullable_to_non_nullable
               as KelvinToCelcius,
-      getDateTime: getDateTime == freezed
-          ? _value.getDateTime
-          : getDateTime // ignore: cast_nullable_to_non_nullable
-              as GetDateTimeNow,
     ));
   }
 }
@@ -590,8 +581,7 @@ abstract class _$WeatherStateCopyWith<$Res>
       {Option<Either<WeatherFailure, WeatherModel>> optionFailureOrSuccess,
       String city,
       bool isLoading,
-      KelvinToCelcius kelvinToCelcius,
-      GetDateTimeNow getDateTime});
+      KelvinToCelcius kelvinToCelcius});
 }
 
 /// @nodoc
@@ -610,7 +600,6 @@ class __$WeatherStateCopyWithImpl<$Res> extends _$WeatherStateCopyWithImpl<$Res>
     Object? city = freezed,
     Object? isLoading = freezed,
     Object? kelvinToCelcius = freezed,
-    Object? getDateTime = freezed,
   }) {
     return _then(_WeatherState(
       optionFailureOrSuccess: optionFailureOrSuccess == freezed
@@ -629,10 +618,6 @@ class __$WeatherStateCopyWithImpl<$Res> extends _$WeatherStateCopyWithImpl<$Res>
           ? _value.kelvinToCelcius
           : kelvinToCelcius // ignore: cast_nullable_to_non_nullable
               as KelvinToCelcius,
-      getDateTime: getDateTime == freezed
-          ? _value.getDateTime
-          : getDateTime // ignore: cast_nullable_to_non_nullable
-              as GetDateTimeNow,
     ));
   }
 }
@@ -644,8 +629,7 @@ class _$_WeatherState implements _WeatherState {
       {required this.optionFailureOrSuccess,
       required this.city,
       required this.isLoading,
-      required this.kelvinToCelcius,
-      required this.getDateTime});
+      required this.kelvinToCelcius});
 
   @override
   final Option<Either<WeatherFailure, WeatherModel>> optionFailureOrSuccess;
@@ -655,12 +639,10 @@ class _$_WeatherState implements _WeatherState {
   final bool isLoading;
   @override
   final KelvinToCelcius kelvinToCelcius;
-  @override
-  final GetDateTimeNow getDateTime;
 
   @override
   String toString() {
-    return 'WeatherState(optionFailureOrSuccess: $optionFailureOrSuccess, city: $city, isLoading: $isLoading, kelvinToCelcius: $kelvinToCelcius, getDateTime: $getDateTime)';
+    return 'WeatherState(optionFailureOrSuccess: $optionFailureOrSuccess, city: $city, isLoading: $isLoading, kelvinToCelcius: $kelvinToCelcius)';
   }
 
   @override
@@ -677,10 +659,7 @@ class _$_WeatherState implements _WeatherState {
                     .equals(other.isLoading, isLoading)) &&
             (identical(other.kelvinToCelcius, kelvinToCelcius) ||
                 const DeepCollectionEquality()
-                    .equals(other.kelvinToCelcius, kelvinToCelcius)) &&
-            (identical(other.getDateTime, getDateTime) ||
-                const DeepCollectionEquality()
-                    .equals(other.getDateTime, getDateTime)));
+                    .equals(other.kelvinToCelcius, kelvinToCelcius)));
   }
 
   @override
@@ -689,8 +668,7 @@ class _$_WeatherState implements _WeatherState {
       const DeepCollectionEquality().hash(optionFailureOrSuccess) ^
       const DeepCollectionEquality().hash(city) ^
       const DeepCollectionEquality().hash(isLoading) ^
-      const DeepCollectionEquality().hash(kelvinToCelcius) ^
-      const DeepCollectionEquality().hash(getDateTime);
+      const DeepCollectionEquality().hash(kelvinToCelcius);
 
   @JsonKey(ignore: true)
   @override
@@ -704,8 +682,7 @@ abstract class _WeatherState implements WeatherState {
           optionFailureOrSuccess,
       required String city,
       required bool isLoading,
-      required KelvinToCelcius kelvinToCelcius,
-      required GetDateTimeNow getDateTime}) = _$_WeatherState;
+      required KelvinToCelcius kelvinToCelcius}) = _$_WeatherState;
 
   @override
   Option<Either<WeatherFailure, WeatherModel>> get optionFailureOrSuccess =>
@@ -716,8 +693,6 @@ abstract class _WeatherState implements WeatherState {
   bool get isLoading => throw _privateConstructorUsedError;
   @override
   KelvinToCelcius get kelvinToCelcius => throw _privateConstructorUsedError;
-  @override
-  GetDateTimeNow get getDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$WeatherStateCopyWith<_WeatherState> get copyWith =>

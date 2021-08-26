@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weather/application/weather/weather_bloc.dart';
+import 'package:weather/domain/core/common_utils.dart';
 import 'package:weather/infrastructure/weather/weather_model.dart';
 
 class WeatherForm extends StatelessWidget {
@@ -9,7 +10,6 @@ class WeatherForm extends StatelessWidget {
     final bloc = BlocProvider.of<WeatherBloc>(context);
     WeatherModel? model;
     String? temp;
-    String? time;
 
     return Scaffold(
       appBar: AppBar(
@@ -26,7 +26,6 @@ class WeatherForm extends StatelessWidget {
             bloc.add(WeatherEvent.calculateTemp(model!.main.temp));
           }
           temp = state.kelvinToCelcius.value.fold((l) => "-", (r) => r);
-          time = state.getDateTime.value.fold((l) => "-", (r) => r);
         },
         builder: (context, state) {
           return Container(
@@ -146,7 +145,6 @@ class WeatherForm extends StatelessWidget {
                               children: [
                                 Text(
                                   "$temp°C",
-                                  // "${double.parse((model!.main.temp - 273.15).toStringAsFixed(1)).toString()}°C",
                                   style: const TextStyle(
                                     fontSize: 40,
                                     fontWeight: FontWeight.w300,
@@ -181,7 +179,10 @@ class WeatherForm extends StatelessWidget {
                                 const Icon(Icons.access_time),
                                 const SizedBox(width: 5),
                                 const Text("Last updated on "),
-                                Text(time!),
+                                Text(
+                                  CommonUtils.getTime(
+                                      'yyyy-MM-dd – HH:mm:ss', DateTime.now()),
+                                )
                               ],
                             ),
                           ],

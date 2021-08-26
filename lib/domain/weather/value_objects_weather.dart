@@ -1,5 +1,4 @@
 import 'package:dartz/dartz.dart';
-import 'package:intl/intl.dart';
 import 'package:weather/domain/core/failures.dart';
 import 'package:weather/domain/core/value_objects.dart';
 
@@ -14,19 +13,4 @@ class KelvinToCelcius extends ValueObjects<double> {
   }
 
   const KelvinToCelcius._(this.value);
-}
-
-class GetDateTimeNow extends ValueObjects<String> {
-  @override
-  final Either<ValueFailure<String>, String> value;
-
-  factory GetDateTimeNow() {
-    return GetDateTimeNow._(
-      right(
-        DateFormat('yyyy-MM-dd – HH:mm:ss').format(DateTime.now()),
-      ),
-    );
-  }
-
-  const GetDateTimeNow._(this.value);
 }

@@ -8,7 +8,6 @@ abstract class WeatherState with _$WeatherState {
     required String city,
     required bool isLoading,
     required KelvinToCelcius kelvinToCelcius,
-    required GetDateTimeNow getDateTime,
   }) = _WeatherState;
 
   factory WeatherState.initial() => WeatherState(
@@ -16,6 +15,5 @@ abstract class WeatherState with _$WeatherState {
         city: '',
         isLoading: false,
         kelvinToCelcius: KelvinToCelcius(0),
-        getDateTime: GetDateTimeNow(),
       );
 }
