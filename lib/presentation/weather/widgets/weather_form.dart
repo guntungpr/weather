@@ -18,9 +18,9 @@ class WeatherForm extends StatelessWidget {
       ),
       body: BlocConsumer<WeatherBloc, WeatherState>(
         listener: (context, state) {
-          model = state.optionFailureOrSuccess.fold(
+          model = state.optionFailureOrSuccess.match(
+            (either) => either.fold((l) => null, (r) => r),
             () => null,
-            (a) => a.fold((l) => null, (r) => r),
           );
           if (model != null) {
             bloc.add(WeatherEvent.calculateTemp(model!.main.temp));
@@ -179,10 +179,7 @@ class WeatherForm extends StatelessWidget {
                                 const Icon(Icons.access_time),
                                 const SizedBox(width: 5),
                                 const Text("Last updated on "),
-                                Text(
-                                  CommonUtils.getTime(
-                                      'yyyy-MM-dd – HH:mm:ss', DateTime.now()),
-                                )
+                                Text(CommonUtils.getTime('yyyy-MM-dd – HH:mm:ss', DateTime.now()))
                               ],
                             ),
                           ],

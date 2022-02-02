@@ -1,6 +1,6 @@
-import 'package:dartz/dartz.dart';
+import 'package:fpdart/fpdart.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:weather/domain/core/failures.dart';
+import 'package:weather/domain/core/failures/failures.dart';
 
 @immutable
 abstract class ValueObjects<T> {

@@ -1,6 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'weather_failure.dart';
 
@@ -33,11 +32,6 @@ mixin _$WeatherFailure {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? failed,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? failed,
     required TResult orElse(),
@@ -46,11 +40,6 @@ mixin _$WeatherFailure {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Failed value) failed,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Failed value)? failed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -122,14 +111,6 @@ class _$_Failed implements _Failed {
 
   @override
   @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? failed,
-  }) {
-    return failed?.call();
-  }
-
-  @override
-  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? failed,
     required TResult orElse(),
@@ -146,14 +127,6 @@ class _$_Failed implements _Failed {
     required TResult Function(_Failed value) failed,
   }) {
     return failed(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Failed value)? failed,
-  }) {
-    return failed?.call(this);
   }
 
   @override

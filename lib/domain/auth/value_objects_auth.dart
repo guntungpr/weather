@@ -1,27 +1,27 @@
-import 'package:dartz/dartz.dart';
-import 'package:weather/domain/core/failures.dart';
+import 'package:fpdart/fpdart.dart';
+import 'package:weather/domain/core/failures/string_failures.dart';
 import 'package:weather/domain/core/validators.dart';
-import 'package:weather/domain/core/value_objects.dart';
+import 'package:weather/domain/objects/string_objects.dart';
 
-class Email extends ValueObjects<String> {
+class Email extends StringObject {
   @override
-  final Either<ValueFailure<String>, String> value;
+  final Either<StringFailure, String> value;
 
   factory Email(String input) {
     return Email._(
-      validateEmail(input),
+      ValueValidators.validateStringNotEmpty(input),
     );
   }
   const Email._(this.value);
 }
 
-class Password extends ValueObjects<String> {
+class Password extends StringObject {
   @override
-  final Either<ValueFailure<String>, String> value;
+  final Either<StringFailure, String> value;
 
   factory Password(String input) {
     return Password._(
-      validatePassword(input),
+      ValueValidators.validateStringNotEmpty(input),
     );
   }
   const Password._(this.value);

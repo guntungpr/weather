@@ -1,4 +1,4 @@
-import 'package:dartz/dartz.dart';
+import 'package:fpdart/fpdart.dart';
 import 'package:injectable/injectable.dart';
 import 'package:weather/domain/core/i_network_service.dart';
 import 'package:weather/domain/weather/i_weather.dart';
@@ -19,8 +19,7 @@ class WeatherRepository implements IWeather {
       };
       final response = await _network.dioResponse(
         method: false,
-        path:
-            'https://api.openweathermap.org/data/2.5/weather?q=$city&appid=c91143f4bb10c4bd2fbf791523768bad',
+        path: 'https://api.openweathermap.org/data/2.5/weather?q=$city&appid=c91143f4bb10c4bd2fbf791523768bad',
         parameter: _body,
       );
       final Map<String, dynamic> model = response.data as Map<String, dynamic>;

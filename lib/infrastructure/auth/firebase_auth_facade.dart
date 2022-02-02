@@ -1,5 +1,5 @@
-import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:fpdart/fpdart.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:injectable/injectable.dart';
 import 'package:weather/domain/auth/auth_failure.dart';
@@ -30,8 +30,8 @@ class FirebaseAuthFacade implements IAuthFacade {
   }) async {
     try {
       await _firebaseAuth.createUserWithEmailAndPassword(
-        email: email.value.getOrElse(() => 'FAILURE'),
-        password: password.value.getOrElse(() => 'FAILURE'),
+        email: email.getOrEmpty(),
+        password: password.getOrEmpty(),
       );
       return right(unit);
     } catch (e) {
@@ -50,8 +50,8 @@ class FirebaseAuthFacade implements IAuthFacade {
   }) async {
     try {
       await _firebaseAuth.signInWithEmailAndPassword(
-        email: email.value.getOrElse(() => 'FAILURE'),
-        password: password.value.getOrElse(() => 'FAILURE'),
+        email: email.getOrEmpty(),
+        password: password.getOrEmpty(),
       );
       return right(unit);
     } catch (e) {
@@ -77,9 +77,7 @@ class FirebaseAuthFacade implements IAuthFacade {
         idToken: googleAuth.idToken,
         accessToken: googleAuth.accessToken,
       );
-      return _firebaseAuth
-          .signInWithCredential(credential)
-          .then((value) => right(unit));
+      return _firebaseAuth.signInWithCredential(credential).then((value) => right(unit));
     } catch (e) {
       return left(const AuthFailure.serverError());
     }
@@ -100,8 +98,8 @@ class FirebaseAuthFacade implements IAuthFacade {
   }) async {
     try {
       final Map<String, dynamic> _body = {
-        'email': email.value.getOrElse(() => 'FAILURE'),
-        'password': password.value.getOrElse(() => '1'),
+        'email': email.getOrEmpty(),
+        'password': password.getOrEmpty(),
       };
       final response = await _networkService.dioResponse(
         method: false,

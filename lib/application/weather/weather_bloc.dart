@@ -1,7 +1,7 @@
-import 'dart:async';
+// ignore_for_file: require_trailing_commas
 
-import 'package:bloc/bloc.dart';
-import 'package:dartz/dartz.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fpdart/fpdart.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:weather/domain/weather/i_weather.dart';
@@ -16,29 +16,28 @@ part 'weather_bloc.freezed.dart';
 @injectable
 class WeatherBloc extends Bloc<WeatherEvent, WeatherState> {
   final IWeather _iWeather;
-  WeatherBloc(this._iWeather) : super(WeatherState.initial());
-
-  @override
-  Stream<WeatherState> mapEventToState(WeatherEvent event) async* {
-    yield* event.map(
-      inputCity: (e) async* {
-        yield state.copyWith(
-          city: e.inputCity,
-        );
-      },
-      searchWeather: (e) async* {
-        yield state.copyWith(isLoading: true);
-        final failureOrSuccess = await _iWeather.getWeather(state.city);
-        yield state.copyWith(
-          optionFailureOrSuccess: some(failureOrSuccess),
-          isLoading: false,
-        );
-      },
-      calculateTemp: (e) async* {
-        yield state.copyWith(
-          kelvinToCelcius: KelvinToCelcius(e.temp),
-        );
-      },
-    );
+  WeatherBloc(this._iWeather) : super(WeatherState.initial()) {
+    on<WeatherEvent>((event, emit) async {
+      await event.map(
+        inputCity: (e) async {
+          emit(state.copyWith(
+            city: e.inputCity,
+          ));
+        },
+        searchWeather: (e) async {
+          emit(state.copyWith(isLoading: true));
+          final failureOrSuccess = await _iWeather.getWeather(state.city);
+          emit(state.copyWith(
+            optionFailureOrSuccess: optionOf(failureOrSuccess),
+            isLoading: false,
+          ));
+        },
+        calculateTemp: (e) async {
+          emit(state.copyWith(
+            kelvinToCelcius: KelvinToCelcius(e.temp),
+          ));
+        },
+      );
+    });
   }
 }

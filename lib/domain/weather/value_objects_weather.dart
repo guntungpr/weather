@@ -1,6 +1,6 @@
-import 'package:dartz/dartz.dart';
-import 'package:weather/domain/core/failures.dart';
-import 'package:weather/domain/core/value_objects.dart';
+import 'package:fpdart/fpdart.dart';
+import 'package:weather/domain/core/failures/failures.dart';
+import 'package:weather/domain/objects/value_objects.dart';
 
 // disini logic/inputan
 class KelvinToCelcius extends ValueObjects<double> {

@@ -1,6 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'weather_bloc.dart';
 
@@ -47,13 +46,6 @@ mixin _$WeatherEvent {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String inputCity)? inputCity,
-    TResult Function()? searchWeather,
-    TResult Function(double temp)? calculateTemp,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String inputCity)? inputCity,
     TResult Function()? searchWeather,
@@ -66,13 +58,6 @@ mixin _$WeatherEvent {
     required TResult Function(InputCity value) inputCity,
     required TResult Function(SearchWeather value) searchWeather,
     required TResult Function(CalculateTemp value) calculateTemp,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(InputCity value)? inputCity,
-    TResult Function(SearchWeather value)? searchWeather,
-    TResult Function(CalculateTemp value)? calculateTemp,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -173,16 +158,6 @@ class _$InputCity implements InputCity {
 
   @override
   @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String inputCity)? inputCity,
-    TResult Function()? searchWeather,
-    TResult Function(double temp)? calculateTemp,
-  }) {
-    return inputCity?.call(this.inputCity);
-  }
-
-  @override
-  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String inputCity)? inputCity,
     TResult Function()? searchWeather,
@@ -203,16 +178,6 @@ class _$InputCity implements InputCity {
     required TResult Function(CalculateTemp value) calculateTemp,
   }) {
     return inputCity(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(InputCity value)? inputCity,
-    TResult Function(SearchWeather value)? searchWeather,
-    TResult Function(CalculateTemp value)? calculateTemp,
-  }) {
-    return inputCity?.call(this);
   }
 
   @override
@@ -287,16 +252,6 @@ class _$SearchWeather implements SearchWeather {
 
   @override
   @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String inputCity)? inputCity,
-    TResult Function()? searchWeather,
-    TResult Function(double temp)? calculateTemp,
-  }) {
-    return searchWeather?.call();
-  }
-
-  @override
-  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String inputCity)? inputCity,
     TResult Function()? searchWeather,
@@ -317,16 +272,6 @@ class _$SearchWeather implements SearchWeather {
     required TResult Function(CalculateTemp value) calculateTemp,
   }) {
     return searchWeather(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(InputCity value)? inputCity,
-    TResult Function(SearchWeather value)? searchWeather,
-    TResult Function(CalculateTemp value)? calculateTemp,
-  }) {
-    return searchWeather?.call(this);
   }
 
   @override
@@ -421,16 +366,6 @@ class _$CalculateTemp implements CalculateTemp {
 
   @override
   @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String inputCity)? inputCity,
-    TResult Function()? searchWeather,
-    TResult Function(double temp)? calculateTemp,
-  }) {
-    return calculateTemp?.call(temp);
-  }
-
-  @override
-  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String inputCity)? inputCity,
     TResult Function()? searchWeather,
@@ -451,16 +386,6 @@ class _$CalculateTemp implements CalculateTemp {
     required TResult Function(CalculateTemp value) calculateTemp,
   }) {
     return calculateTemp(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(InputCity value)? inputCity,
-    TResult Function(SearchWeather value)? searchWeather,
-    TResult Function(CalculateTemp value)? calculateTemp,
-  }) {
-    return calculateTemp?.call(this);
   }
 
   @override
