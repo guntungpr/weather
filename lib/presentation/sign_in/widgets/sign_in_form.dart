@@ -92,7 +92,7 @@ class SignInForm extends StatelessWidget {
                 onChanged: (value) => bloc.add(SignInFormEvent.passwordChanged(value)),
                 validator: (_) => bloc.state.password.value.fold(
                   (f) => f.maybeMap(
-                    shortPassword: (_) => 'At least 6 characters',
+                    lengthTooShort: (_) => 'At least 6 characters',
                     orElse: () => null,
                   ),
                   (_) => null,

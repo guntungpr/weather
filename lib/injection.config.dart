@@ -16,8 +16,8 @@ import 'domain/auth/i_auth_facade.dart' as _i11;
 import 'domain/core/i_network_service.dart' as _i6;
 import 'domain/weather/i_weather.dart' as _i8;
 import 'infrastructure/auth/firebase_auth_facade.dart' as _i12;
-import 'infrastructure/core/firebase_injectable_module.dart' as _i14;
 import 'infrastructure/core/network_service.dart' as _i7;
+import 'infrastructure/core/register_module.dart' as _i14;
 import 'infrastructure/weather/weather_repository.dart'
     as _i9; // ignore_for_file: unnecessary_lambdas
 

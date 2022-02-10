@@ -23,10 +23,8 @@ abstract class FirebaseInjectableModule {
       sendTimeout: 60000,
       baseUrl: baseUrl,
     );
-    (_dio.httpClientAdapter as DefaultHttpClientAdapter).onHttpClientCreate =
-        (HttpClient client) {
-      client.badCertificateCallback =
-          (X509Certificate cert, String host, int port) {
+    (_dio.httpClientAdapter as DefaultHttpClientAdapter).onHttpClientCreate = (HttpClient client) {
+      client.badCertificateCallback = (X509Certificate cert, String host, int port) {
         return baseUrl.contains(host);
       };
       return client;
