@@ -5,18 +5,18 @@ class SignInFormState with _$SignInFormState {
   const factory SignInFormState({
     required Email emailAddress,
     required Password password,
-    required bool showErrorMessages,
-    required bool isSubmitting,
-    required Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption,
-    required Option<Either<AuthFailure, UserLocalModel>> authLocal,
+    required bool obsecurePass,
+    required bool isSubmitted,
+    required bool isLoading,
+    required Option<Either<AuthFailure, UserLocalModel>> authFailureOrSuccessOption,
   }) = _SignInFormState;
 
   factory SignInFormState.initial() => SignInFormState(
         emailAddress: Email(''),
         password: Password(''),
-        showErrorMessages: false,
-        isSubmitting: false,
+        obsecurePass: false,
+        isSubmitted: false,
+        isLoading: false,
         authFailureOrSuccessOption: none(),
-        authLocal: none(),
       );
 }

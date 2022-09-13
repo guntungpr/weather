@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'string_failures.dart';
 
@@ -90,6 +92,18 @@ mixin _$StringFailure {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String? failedValue)? empty,
+    TResult Function(String? failedValue, int max)? exceedingLength,
+    TResult Function(String? failedValue, int min)? lengthTooShort,
+    TResult Function(String? failedValue, int length)? wrongLength,
+    TResult Function(String? failedValue)? invalidPersonName,
+    TResult Function(String? failedValue)? invalidPhone,
+    TResult Function(String? failedValue)? invalidEmail,
+    TResult Function(DateTime failedValue, String pattern)? invalidDateTime,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String? failedValue)? empty,
     TResult Function(String? failedValue, int max)? exceedingLength,
@@ -112,6 +126,18 @@ mixin _$StringFailure {
     required TResult Function(InvalidPhone value) invalidPhone,
     required TResult Function(InvalidEmail value) invalidEmail,
     required TResult Function(InvalidDateTime value) invalidDateTime,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Empty value)? empty,
+    TResult Function(ExceedingLength value)? exceedingLength,
+    TResult Function(TooShort value)? lengthTooShort,
+    TResult Function(WrongLength value)? wrongLength,
+    TResult Function(InvalidPersonName value)? invalidPersonName,
+    TResult Function(InvalidPhone value)? invalidPhone,
+    TResult Function(InvalidEmail value)? invalidEmail,
+    TResult Function(InvalidDateTime value)? invalidDateTime,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -191,15 +217,15 @@ class _$Empty implements Empty {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Empty &&
-            (identical(other.failedValue, failedValue) ||
-                const DeepCollectionEquality()
-                    .equals(other.failedValue, failedValue)));
+        (other.runtimeType == runtimeType &&
+            other is Empty &&
+            const DeepCollectionEquality()
+                .equals(other.failedValue, failedValue));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(failedValue));
 
   @JsonKey(ignore: true)
   @override
@@ -220,6 +246,21 @@ class _$Empty implements Empty {
         invalidDateTime,
   }) {
     return empty(failedValue);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String? failedValue)? empty,
+    TResult Function(String? failedValue, int max)? exceedingLength,
+    TResult Function(String? failedValue, int min)? lengthTooShort,
+    TResult Function(String? failedValue, int length)? wrongLength,
+    TResult Function(String? failedValue)? invalidPersonName,
+    TResult Function(String? failedValue)? invalidPhone,
+    TResult Function(String? failedValue)? invalidEmail,
+    TResult Function(DateTime failedValue, String pattern)? invalidDateTime,
+  }) {
+    return empty?.call(failedValue);
   }
 
   @override
@@ -258,6 +299,21 @@ class _$Empty implements Empty {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Empty value)? empty,
+    TResult Function(ExceedingLength value)? exceedingLength,
+    TResult Function(TooShort value)? lengthTooShort,
+    TResult Function(WrongLength value)? wrongLength,
+    TResult Function(InvalidPersonName value)? invalidPersonName,
+    TResult Function(InvalidPhone value)? invalidPhone,
+    TResult Function(InvalidEmail value)? invalidEmail,
+    TResult Function(InvalidDateTime value)? invalidDateTime,
+  }) {
+    return empty?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Empty value)? empty,
     TResult Function(ExceedingLength value)? exceedingLength,
@@ -279,7 +335,7 @@ class _$Empty implements Empty {
 abstract class Empty implements StringFailure {
   const factory Empty({required String? failedValue}) = _$Empty;
 
-  String? get failedValue => throw _privateConstructorUsedError;
+  String? get failedValue;
   @JsonKey(ignore: true)
   $EmptyCopyWith<Empty> get copyWith => throw _privateConstructorUsedError;
 }
@@ -339,19 +395,18 @@ class _$ExceedingLength implements ExceedingLength {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is ExceedingLength &&
-            (identical(other.failedValue, failedValue) ||
-                const DeepCollectionEquality()
-                    .equals(other.failedValue, failedValue)) &&
-            (identical(other.max, max) ||
-                const DeepCollectionEquality().equals(other.max, max)));
+        (other.runtimeType == runtimeType &&
+            other is ExceedingLength &&
+            const DeepCollectionEquality()
+                .equals(other.failedValue, failedValue) &&
+            const DeepCollectionEquality().equals(other.max, max));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(failedValue) ^
-      const DeepCollectionEquality().hash(max);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(failedValue),
+      const DeepCollectionEquality().hash(max));
 
   @JsonKey(ignore: true)
   @override
@@ -372,6 +427,21 @@ class _$ExceedingLength implements ExceedingLength {
         invalidDateTime,
   }) {
     return exceedingLength(failedValue, max);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String? failedValue)? empty,
+    TResult Function(String? failedValue, int max)? exceedingLength,
+    TResult Function(String? failedValue, int min)? lengthTooShort,
+    TResult Function(String? failedValue, int length)? wrongLength,
+    TResult Function(String? failedValue)? invalidPersonName,
+    TResult Function(String? failedValue)? invalidPhone,
+    TResult Function(String? failedValue)? invalidEmail,
+    TResult Function(DateTime failedValue, String pattern)? invalidDateTime,
+  }) {
+    return exceedingLength?.call(failedValue, max);
   }
 
   @override
@@ -410,6 +480,21 @@ class _$ExceedingLength implements ExceedingLength {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Empty value)? empty,
+    TResult Function(ExceedingLength value)? exceedingLength,
+    TResult Function(TooShort value)? lengthTooShort,
+    TResult Function(WrongLength value)? wrongLength,
+    TResult Function(InvalidPersonName value)? invalidPersonName,
+    TResult Function(InvalidPhone value)? invalidPhone,
+    TResult Function(InvalidEmail value)? invalidEmail,
+    TResult Function(InvalidDateTime value)? invalidDateTime,
+  }) {
+    return exceedingLength?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Empty value)? empty,
     TResult Function(ExceedingLength value)? exceedingLength,
@@ -432,8 +517,8 @@ abstract class ExceedingLength implements StringFailure {
   const factory ExceedingLength(
       {required String? failedValue, required int max}) = _$ExceedingLength;
 
-  String? get failedValue => throw _privateConstructorUsedError;
-  int get max => throw _privateConstructorUsedError;
+  String? get failedValue;
+  int get max;
   @JsonKey(ignore: true)
   $ExceedingLengthCopyWith<ExceedingLength> get copyWith =>
       throw _privateConstructorUsedError;
@@ -491,19 +576,18 @@ class _$TooShort implements TooShort {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is TooShort &&
-            (identical(other.failedValue, failedValue) ||
-                const DeepCollectionEquality()
-                    .equals(other.failedValue, failedValue)) &&
-            (identical(other.min, min) ||
-                const DeepCollectionEquality().equals(other.min, min)));
+        (other.runtimeType == runtimeType &&
+            other is TooShort &&
+            const DeepCollectionEquality()
+                .equals(other.failedValue, failedValue) &&
+            const DeepCollectionEquality().equals(other.min, min));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(failedValue) ^
-      const DeepCollectionEquality().hash(min);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(failedValue),
+      const DeepCollectionEquality().hash(min));
 
   @JsonKey(ignore: true)
   @override
@@ -524,6 +608,21 @@ class _$TooShort implements TooShort {
         invalidDateTime,
   }) {
     return lengthTooShort(failedValue, min);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String? failedValue)? empty,
+    TResult Function(String? failedValue, int max)? exceedingLength,
+    TResult Function(String? failedValue, int min)? lengthTooShort,
+    TResult Function(String? failedValue, int length)? wrongLength,
+    TResult Function(String? failedValue)? invalidPersonName,
+    TResult Function(String? failedValue)? invalidPhone,
+    TResult Function(String? failedValue)? invalidEmail,
+    TResult Function(DateTime failedValue, String pattern)? invalidDateTime,
+  }) {
+    return lengthTooShort?.call(failedValue, min);
   }
 
   @override
@@ -562,6 +661,21 @@ class _$TooShort implements TooShort {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Empty value)? empty,
+    TResult Function(ExceedingLength value)? exceedingLength,
+    TResult Function(TooShort value)? lengthTooShort,
+    TResult Function(WrongLength value)? wrongLength,
+    TResult Function(InvalidPersonName value)? invalidPersonName,
+    TResult Function(InvalidPhone value)? invalidPhone,
+    TResult Function(InvalidEmail value)? invalidEmail,
+    TResult Function(InvalidDateTime value)? invalidDateTime,
+  }) {
+    return lengthTooShort?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Empty value)? empty,
     TResult Function(ExceedingLength value)? exceedingLength,
@@ -584,8 +698,8 @@ abstract class TooShort implements StringFailure {
   const factory TooShort({required String? failedValue, required int min}) =
       _$TooShort;
 
-  String? get failedValue => throw _privateConstructorUsedError;
-  int get min => throw _privateConstructorUsedError;
+  String? get failedValue;
+  int get min;
   @JsonKey(ignore: true)
   $TooShortCopyWith<TooShort> get copyWith =>
       throw _privateConstructorUsedError;
@@ -645,19 +759,18 @@ class _$WrongLength implements WrongLength {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is WrongLength &&
-            (identical(other.failedValue, failedValue) ||
-                const DeepCollectionEquality()
-                    .equals(other.failedValue, failedValue)) &&
-            (identical(other.length, length) ||
-                const DeepCollectionEquality().equals(other.length, length)));
+        (other.runtimeType == runtimeType &&
+            other is WrongLength &&
+            const DeepCollectionEquality()
+                .equals(other.failedValue, failedValue) &&
+            const DeepCollectionEquality().equals(other.length, length));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(failedValue) ^
-      const DeepCollectionEquality().hash(length);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(failedValue),
+      const DeepCollectionEquality().hash(length));
 
   @JsonKey(ignore: true)
   @override
@@ -678,6 +791,21 @@ class _$WrongLength implements WrongLength {
         invalidDateTime,
   }) {
     return wrongLength(failedValue, length);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String? failedValue)? empty,
+    TResult Function(String? failedValue, int max)? exceedingLength,
+    TResult Function(String? failedValue, int min)? lengthTooShort,
+    TResult Function(String? failedValue, int length)? wrongLength,
+    TResult Function(String? failedValue)? invalidPersonName,
+    TResult Function(String? failedValue)? invalidPhone,
+    TResult Function(String? failedValue)? invalidEmail,
+    TResult Function(DateTime failedValue, String pattern)? invalidDateTime,
+  }) {
+    return wrongLength?.call(failedValue, length);
   }
 
   @override
@@ -716,6 +844,21 @@ class _$WrongLength implements WrongLength {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Empty value)? empty,
+    TResult Function(ExceedingLength value)? exceedingLength,
+    TResult Function(TooShort value)? lengthTooShort,
+    TResult Function(WrongLength value)? wrongLength,
+    TResult Function(InvalidPersonName value)? invalidPersonName,
+    TResult Function(InvalidPhone value)? invalidPhone,
+    TResult Function(InvalidEmail value)? invalidEmail,
+    TResult Function(InvalidDateTime value)? invalidDateTime,
+  }) {
+    return wrongLength?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Empty value)? empty,
     TResult Function(ExceedingLength value)? exceedingLength,
@@ -738,8 +881,8 @@ abstract class WrongLength implements StringFailure {
   const factory WrongLength(
       {required String? failedValue, required int length}) = _$WrongLength;
 
-  String? get failedValue => throw _privateConstructorUsedError;
-  int get length => throw _privateConstructorUsedError;
+  String? get failedValue;
+  int get length;
   @JsonKey(ignore: true)
   $WrongLengthCopyWith<WrongLength> get copyWith =>
       throw _privateConstructorUsedError;
@@ -793,15 +936,15 @@ class _$InvalidPersonName implements InvalidPersonName {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is InvalidPersonName &&
-            (identical(other.failedValue, failedValue) ||
-                const DeepCollectionEquality()
-                    .equals(other.failedValue, failedValue)));
+        (other.runtimeType == runtimeType &&
+            other is InvalidPersonName &&
+            const DeepCollectionEquality()
+                .equals(other.failedValue, failedValue));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(failedValue));
 
   @JsonKey(ignore: true)
   @override
@@ -822,6 +965,21 @@ class _$InvalidPersonName implements InvalidPersonName {
         invalidDateTime,
   }) {
     return invalidPersonName(failedValue);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String? failedValue)? empty,
+    TResult Function(String? failedValue, int max)? exceedingLength,
+    TResult Function(String? failedValue, int min)? lengthTooShort,
+    TResult Function(String? failedValue, int length)? wrongLength,
+    TResult Function(String? failedValue)? invalidPersonName,
+    TResult Function(String? failedValue)? invalidPhone,
+    TResult Function(String? failedValue)? invalidEmail,
+    TResult Function(DateTime failedValue, String pattern)? invalidDateTime,
+  }) {
+    return invalidPersonName?.call(failedValue);
   }
 
   @override
@@ -860,6 +1018,21 @@ class _$InvalidPersonName implements InvalidPersonName {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Empty value)? empty,
+    TResult Function(ExceedingLength value)? exceedingLength,
+    TResult Function(TooShort value)? lengthTooShort,
+    TResult Function(WrongLength value)? wrongLength,
+    TResult Function(InvalidPersonName value)? invalidPersonName,
+    TResult Function(InvalidPhone value)? invalidPhone,
+    TResult Function(InvalidEmail value)? invalidEmail,
+    TResult Function(InvalidDateTime value)? invalidDateTime,
+  }) {
+    return invalidPersonName?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Empty value)? empty,
     TResult Function(ExceedingLength value)? exceedingLength,
@@ -882,7 +1055,7 @@ abstract class InvalidPersonName implements StringFailure {
   const factory InvalidPersonName({required String? failedValue}) =
       _$InvalidPersonName;
 
-  String? get failedValue => throw _privateConstructorUsedError;
+  String? get failedValue;
   @JsonKey(ignore: true)
   $InvalidPersonNameCopyWith<InvalidPersonName> get copyWith =>
       throw _privateConstructorUsedError;
@@ -935,15 +1108,15 @@ class _$InvalidPhone implements InvalidPhone {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is InvalidPhone &&
-            (identical(other.failedValue, failedValue) ||
-                const DeepCollectionEquality()
-                    .equals(other.failedValue, failedValue)));
+        (other.runtimeType == runtimeType &&
+            other is InvalidPhone &&
+            const DeepCollectionEquality()
+                .equals(other.failedValue, failedValue));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(failedValue));
 
   @JsonKey(ignore: true)
   @override
@@ -964,6 +1137,21 @@ class _$InvalidPhone implements InvalidPhone {
         invalidDateTime,
   }) {
     return invalidPhone(failedValue);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String? failedValue)? empty,
+    TResult Function(String? failedValue, int max)? exceedingLength,
+    TResult Function(String? failedValue, int min)? lengthTooShort,
+    TResult Function(String? failedValue, int length)? wrongLength,
+    TResult Function(String? failedValue)? invalidPersonName,
+    TResult Function(String? failedValue)? invalidPhone,
+    TResult Function(String? failedValue)? invalidEmail,
+    TResult Function(DateTime failedValue, String pattern)? invalidDateTime,
+  }) {
+    return invalidPhone?.call(failedValue);
   }
 
   @override
@@ -1002,6 +1190,21 @@ class _$InvalidPhone implements InvalidPhone {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Empty value)? empty,
+    TResult Function(ExceedingLength value)? exceedingLength,
+    TResult Function(TooShort value)? lengthTooShort,
+    TResult Function(WrongLength value)? wrongLength,
+    TResult Function(InvalidPersonName value)? invalidPersonName,
+    TResult Function(InvalidPhone value)? invalidPhone,
+    TResult Function(InvalidEmail value)? invalidEmail,
+    TResult Function(InvalidDateTime value)? invalidDateTime,
+  }) {
+    return invalidPhone?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Empty value)? empty,
     TResult Function(ExceedingLength value)? exceedingLength,
@@ -1023,7 +1226,7 @@ class _$InvalidPhone implements InvalidPhone {
 abstract class InvalidPhone implements StringFailure {
   const factory InvalidPhone({required String? failedValue}) = _$InvalidPhone;
 
-  String? get failedValue => throw _privateConstructorUsedError;
+  String? get failedValue;
   @JsonKey(ignore: true)
   $InvalidPhoneCopyWith<InvalidPhone> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1076,15 +1279,15 @@ class _$InvalidEmail implements InvalidEmail {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is InvalidEmail &&
-            (identical(other.failedValue, failedValue) ||
-                const DeepCollectionEquality()
-                    .equals(other.failedValue, failedValue)));
+        (other.runtimeType == runtimeType &&
+            other is InvalidEmail &&
+            const DeepCollectionEquality()
+                .equals(other.failedValue, failedValue));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(failedValue));
 
   @JsonKey(ignore: true)
   @override
@@ -1105,6 +1308,21 @@ class _$InvalidEmail implements InvalidEmail {
         invalidDateTime,
   }) {
     return invalidEmail(failedValue);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String? failedValue)? empty,
+    TResult Function(String? failedValue, int max)? exceedingLength,
+    TResult Function(String? failedValue, int min)? lengthTooShort,
+    TResult Function(String? failedValue, int length)? wrongLength,
+    TResult Function(String? failedValue)? invalidPersonName,
+    TResult Function(String? failedValue)? invalidPhone,
+    TResult Function(String? failedValue)? invalidEmail,
+    TResult Function(DateTime failedValue, String pattern)? invalidDateTime,
+  }) {
+    return invalidEmail?.call(failedValue);
   }
 
   @override
@@ -1143,6 +1361,21 @@ class _$InvalidEmail implements InvalidEmail {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Empty value)? empty,
+    TResult Function(ExceedingLength value)? exceedingLength,
+    TResult Function(TooShort value)? lengthTooShort,
+    TResult Function(WrongLength value)? wrongLength,
+    TResult Function(InvalidPersonName value)? invalidPersonName,
+    TResult Function(InvalidPhone value)? invalidPhone,
+    TResult Function(InvalidEmail value)? invalidEmail,
+    TResult Function(InvalidDateTime value)? invalidDateTime,
+  }) {
+    return invalidEmail?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Empty value)? empty,
     TResult Function(ExceedingLength value)? exceedingLength,
@@ -1164,7 +1397,7 @@ class _$InvalidEmail implements InvalidEmail {
 abstract class InvalidEmail implements StringFailure {
   const factory InvalidEmail({required String? failedValue}) = _$InvalidEmail;
 
-  String? get failedValue => throw _privateConstructorUsedError;
+  String? get failedValue;
   @JsonKey(ignore: true)
   $InvalidEmailCopyWith<InvalidEmail> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1225,19 +1458,18 @@ class _$InvalidDateTime implements InvalidDateTime {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is InvalidDateTime &&
-            (identical(other.failedValue, failedValue) ||
-                const DeepCollectionEquality()
-                    .equals(other.failedValue, failedValue)) &&
-            (identical(other.pattern, pattern) ||
-                const DeepCollectionEquality().equals(other.pattern, pattern)));
+        (other.runtimeType == runtimeType &&
+            other is InvalidDateTime &&
+            const DeepCollectionEquality()
+                .equals(other.failedValue, failedValue) &&
+            const DeepCollectionEquality().equals(other.pattern, pattern));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(failedValue) ^
-      const DeepCollectionEquality().hash(pattern);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(failedValue),
+      const DeepCollectionEquality().hash(pattern));
 
   @JsonKey(ignore: true)
   @override
@@ -1258,6 +1490,21 @@ class _$InvalidDateTime implements InvalidDateTime {
         invalidDateTime,
   }) {
     return invalidDateTime(failedValue, pattern);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String? failedValue)? empty,
+    TResult Function(String? failedValue, int max)? exceedingLength,
+    TResult Function(String? failedValue, int min)? lengthTooShort,
+    TResult Function(String? failedValue, int length)? wrongLength,
+    TResult Function(String? failedValue)? invalidPersonName,
+    TResult Function(String? failedValue)? invalidPhone,
+    TResult Function(String? failedValue)? invalidEmail,
+    TResult Function(DateTime failedValue, String pattern)? invalidDateTime,
+  }) {
+    return invalidDateTime?.call(failedValue, pattern);
   }
 
   @override
@@ -1296,6 +1543,21 @@ class _$InvalidDateTime implements InvalidDateTime {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Empty value)? empty,
+    TResult Function(ExceedingLength value)? exceedingLength,
+    TResult Function(TooShort value)? lengthTooShort,
+    TResult Function(WrongLength value)? wrongLength,
+    TResult Function(InvalidPersonName value)? invalidPersonName,
+    TResult Function(InvalidPhone value)? invalidPhone,
+    TResult Function(InvalidEmail value)? invalidEmail,
+    TResult Function(InvalidDateTime value)? invalidDateTime,
+  }) {
+    return invalidDateTime?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Empty value)? empty,
     TResult Function(ExceedingLength value)? exceedingLength,
@@ -1319,8 +1581,8 @@ abstract class InvalidDateTime implements StringFailure {
       {required DateTime failedValue,
       required String pattern}) = _$InvalidDateTime;
 
-  DateTime get failedValue => throw _privateConstructorUsedError;
-  String get pattern => throw _privateConstructorUsedError;
+  DateTime get failedValue;
+  String get pattern;
   @JsonKey(ignore: true)
   $InvalidDateTimeCopyWith<InvalidDateTime> get copyWith =>
       throw _privateConstructorUsedError;

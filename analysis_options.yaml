@@ -1,7 +1,22 @@
 include: package:lint/analysis_options.yaml
 
+linter:
+  rules:
+    avoid_classes_with_only_static_members: false
+    non_constant_identifier_names: false
+    invalid_annotation_target: false
+    require_trailing_commas: false
+    depend_on_referenced_packages: false
+    avoid_single_cascade_in_expression_statements: false
+    use_setters_to_change_properties: false
+    no_leading_underscores_for_local_identifiers : false
+
 analyzer:
+  exclude:
+    - lib/**.g.dart
+    - lib/**.freezed.dart
+    - lib/injection.config.dart
   errors:
     missing_required_param: error
     missing_return: error
-    must_be_immutable: error
+    # must_be_immutable: error

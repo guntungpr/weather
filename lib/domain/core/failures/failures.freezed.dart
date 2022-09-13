@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'failures.dart';
 
@@ -128,6 +130,24 @@ mixin _$ValueFailure<T> {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(T failedValue)? invalidEmail,
+    TResult Function(T failedValue)? shortPassword,
+    TResult Function(T? failedValue)? empty,
+    TResult Function(T? failedValue)? notPositiveNumber,
+    TResult Function(T? failedValue)? multiline,
+    TResult Function(T failedValue, int max)? listTooLong,
+    TResult Function(T failedValue, int min)? listTooShort,
+    TResult Function(T? failedValue)? unregisteredPhone,
+    TResult Function(T? failedValue)? invalidObject,
+    TResult Function()? emptyObject,
+    TResult Function(T? failedValue)? shortToken,
+    TResult Function(double failedValue, double maxBalance)? exceedingBalance,
+    TResult Function(T? failedValue)? noteExceed,
+    TResult Function(T? failedValue)? confirmationNotMatch,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(T failedValue)? invalidEmail,
     TResult Function(T failedValue)? shortPassword,
@@ -163,6 +183,24 @@ mixin _$ValueFailure<T> {
     required TResult Function(NoteExceed<T> value) noteExceed,
     required TResult Function(ConfirmationNotMatch<T> value)
         confirmationNotMatch,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(InvalidEmail<T> value)? invalidEmail,
+    TResult Function(ShortPassword<T> value)? shortPassword,
+    TResult Function(Empty<T> value)? empty,
+    TResult Function(NotPositiveNumber<T> value)? notPositiveNumber,
+    TResult Function(Multiline<T> value)? multiline,
+    TResult Function(ListTooLong<T> value)? listTooLong,
+    TResult Function(ListTooShort<T> value)? listTooShort,
+    TResult Function(UnregisteredPhone<T> value)? unregisteredPhone,
+    TResult Function(InvalidObject<T> value)? invalidObject,
+    TResult Function(EmptyObject<T> value)? emptyObject,
+    TResult Function(ShortToken<T> value)? shortToken,
+    TResult Function(ExceedBalance<T> value)? exceedingBalance,
+    TResult Function(NoteExceed<T> value)? noteExceed,
+    TResult Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -251,15 +289,15 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is InvalidEmail<T> &&
-            (identical(other.failedValue, failedValue) ||
-                const DeepCollectionEquality()
-                    .equals(other.failedValue, failedValue)));
+        (other.runtimeType == runtimeType &&
+            other is InvalidEmail<T> &&
+            const DeepCollectionEquality()
+                .equals(other.failedValue, failedValue));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(failedValue));
 
   @JsonKey(ignore: true)
   @override
@@ -286,6 +324,27 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
     required TResult Function(T? failedValue) confirmationNotMatch,
   }) {
     return invalidEmail(failedValue);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(T failedValue)? invalidEmail,
+    TResult Function(T failedValue)? shortPassword,
+    TResult Function(T? failedValue)? empty,
+    TResult Function(T? failedValue)? notPositiveNumber,
+    TResult Function(T? failedValue)? multiline,
+    TResult Function(T failedValue, int max)? listTooLong,
+    TResult Function(T failedValue, int min)? listTooShort,
+    TResult Function(T? failedValue)? unregisteredPhone,
+    TResult Function(T? failedValue)? invalidObject,
+    TResult Function()? emptyObject,
+    TResult Function(T? failedValue)? shortToken,
+    TResult Function(double failedValue, double maxBalance)? exceedingBalance,
+    TResult Function(T? failedValue)? noteExceed,
+    TResult Function(T? failedValue)? confirmationNotMatch,
+  }) {
+    return invalidEmail?.call(failedValue);
   }
 
   @override
@@ -337,6 +396,27 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(InvalidEmail<T> value)? invalidEmail,
+    TResult Function(ShortPassword<T> value)? shortPassword,
+    TResult Function(Empty<T> value)? empty,
+    TResult Function(NotPositiveNumber<T> value)? notPositiveNumber,
+    TResult Function(Multiline<T> value)? multiline,
+    TResult Function(ListTooLong<T> value)? listTooLong,
+    TResult Function(ListTooShort<T> value)? listTooShort,
+    TResult Function(UnregisteredPhone<T> value)? unregisteredPhone,
+    TResult Function(InvalidObject<T> value)? invalidObject,
+    TResult Function(EmptyObject<T> value)? emptyObject,
+    TResult Function(ShortToken<T> value)? shortToken,
+    TResult Function(ExceedBalance<T> value)? exceedingBalance,
+    TResult Function(NoteExceed<T> value)? noteExceed,
+    TResult Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
+  }) {
+    return invalidEmail?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(InvalidEmail<T> value)? invalidEmail,
     TResult Function(ShortPassword<T> value)? shortPassword,
@@ -364,7 +444,7 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
 abstract class InvalidEmail<T> implements ValueFailure<T> {
   const factory InvalidEmail({required T failedValue}) = _$InvalidEmail<T>;
 
-  T get failedValue => throw _privateConstructorUsedError;
+  T get failedValue;
   @JsonKey(ignore: true)
   $InvalidEmailCopyWith<T, InvalidEmail<T>> get copyWith =>
       throw _privateConstructorUsedError;
@@ -418,15 +498,15 @@ class _$ShortPassword<T> implements ShortPassword<T> {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is ShortPassword<T> &&
-            (identical(other.failedValue, failedValue) ||
-                const DeepCollectionEquality()
-                    .equals(other.failedValue, failedValue)));
+        (other.runtimeType == runtimeType &&
+            other is ShortPassword<T> &&
+            const DeepCollectionEquality()
+                .equals(other.failedValue, failedValue));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(failedValue));
 
   @JsonKey(ignore: true)
   @override
@@ -453,6 +533,27 @@ class _$ShortPassword<T> implements ShortPassword<T> {
     required TResult Function(T? failedValue) confirmationNotMatch,
   }) {
     return shortPassword(failedValue);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(T failedValue)? invalidEmail,
+    TResult Function(T failedValue)? shortPassword,
+    TResult Function(T? failedValue)? empty,
+    TResult Function(T? failedValue)? notPositiveNumber,
+    TResult Function(T? failedValue)? multiline,
+    TResult Function(T failedValue, int max)? listTooLong,
+    TResult Function(T failedValue, int min)? listTooShort,
+    TResult Function(T? failedValue)? unregisteredPhone,
+    TResult Function(T? failedValue)? invalidObject,
+    TResult Function()? emptyObject,
+    TResult Function(T? failedValue)? shortToken,
+    TResult Function(double failedValue, double maxBalance)? exceedingBalance,
+    TResult Function(T? failedValue)? noteExceed,
+    TResult Function(T? failedValue)? confirmationNotMatch,
+  }) {
+    return shortPassword?.call(failedValue);
   }
 
   @override
@@ -504,6 +605,27 @@ class _$ShortPassword<T> implements ShortPassword<T> {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(InvalidEmail<T> value)? invalidEmail,
+    TResult Function(ShortPassword<T> value)? shortPassword,
+    TResult Function(Empty<T> value)? empty,
+    TResult Function(NotPositiveNumber<T> value)? notPositiveNumber,
+    TResult Function(Multiline<T> value)? multiline,
+    TResult Function(ListTooLong<T> value)? listTooLong,
+    TResult Function(ListTooShort<T> value)? listTooShort,
+    TResult Function(UnregisteredPhone<T> value)? unregisteredPhone,
+    TResult Function(InvalidObject<T> value)? invalidObject,
+    TResult Function(EmptyObject<T> value)? emptyObject,
+    TResult Function(ShortToken<T> value)? shortToken,
+    TResult Function(ExceedBalance<T> value)? exceedingBalance,
+    TResult Function(NoteExceed<T> value)? noteExceed,
+    TResult Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
+  }) {
+    return shortPassword?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(InvalidEmail<T> value)? invalidEmail,
     TResult Function(ShortPassword<T> value)? shortPassword,
@@ -531,7 +653,7 @@ class _$ShortPassword<T> implements ShortPassword<T> {
 abstract class ShortPassword<T> implements ValueFailure<T> {
   const factory ShortPassword({required T failedValue}) = _$ShortPassword<T>;
 
-  T get failedValue => throw _privateConstructorUsedError;
+  T get failedValue;
   @JsonKey(ignore: true)
   $ShortPasswordCopyWith<T, ShortPassword<T>> get copyWith =>
       throw _privateConstructorUsedError;
@@ -582,15 +704,15 @@ class _$Empty<T> implements Empty<T> {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Empty<T> &&
-            (identical(other.failedValue, failedValue) ||
-                const DeepCollectionEquality()
-                    .equals(other.failedValue, failedValue)));
+        (other.runtimeType == runtimeType &&
+            other is Empty<T> &&
+            const DeepCollectionEquality()
+                .equals(other.failedValue, failedValue));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(failedValue));
 
   @JsonKey(ignore: true)
   @override
@@ -617,6 +739,27 @@ class _$Empty<T> implements Empty<T> {
     required TResult Function(T? failedValue) confirmationNotMatch,
   }) {
     return empty(failedValue);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(T failedValue)? invalidEmail,
+    TResult Function(T failedValue)? shortPassword,
+    TResult Function(T? failedValue)? empty,
+    TResult Function(T? failedValue)? notPositiveNumber,
+    TResult Function(T? failedValue)? multiline,
+    TResult Function(T failedValue, int max)? listTooLong,
+    TResult Function(T failedValue, int min)? listTooShort,
+    TResult Function(T? failedValue)? unregisteredPhone,
+    TResult Function(T? failedValue)? invalidObject,
+    TResult Function()? emptyObject,
+    TResult Function(T? failedValue)? shortToken,
+    TResult Function(double failedValue, double maxBalance)? exceedingBalance,
+    TResult Function(T? failedValue)? noteExceed,
+    TResult Function(T? failedValue)? confirmationNotMatch,
+  }) {
+    return empty?.call(failedValue);
   }
 
   @override
@@ -668,6 +811,27 @@ class _$Empty<T> implements Empty<T> {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(InvalidEmail<T> value)? invalidEmail,
+    TResult Function(ShortPassword<T> value)? shortPassword,
+    TResult Function(Empty<T> value)? empty,
+    TResult Function(NotPositiveNumber<T> value)? notPositiveNumber,
+    TResult Function(Multiline<T> value)? multiline,
+    TResult Function(ListTooLong<T> value)? listTooLong,
+    TResult Function(ListTooShort<T> value)? listTooShort,
+    TResult Function(UnregisteredPhone<T> value)? unregisteredPhone,
+    TResult Function(InvalidObject<T> value)? invalidObject,
+    TResult Function(EmptyObject<T> value)? emptyObject,
+    TResult Function(ShortToken<T> value)? shortToken,
+    TResult Function(ExceedBalance<T> value)? exceedingBalance,
+    TResult Function(NoteExceed<T> value)? noteExceed,
+    TResult Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
+  }) {
+    return empty?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(InvalidEmail<T> value)? invalidEmail,
     TResult Function(ShortPassword<T> value)? shortPassword,
@@ -695,7 +859,7 @@ class _$Empty<T> implements Empty<T> {
 abstract class Empty<T> implements ValueFailure<T> {
   const factory Empty({required T? failedValue}) = _$Empty<T>;
 
-  T? get failedValue => throw _privateConstructorUsedError;
+  T? get failedValue;
   @JsonKey(ignore: true)
   $EmptyCopyWith<T, Empty<T>> get copyWith =>
       throw _privateConstructorUsedError;
@@ -749,15 +913,15 @@ class _$NotPositiveNumber<T> implements NotPositiveNumber<T> {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is NotPositiveNumber<T> &&
-            (identical(other.failedValue, failedValue) ||
-                const DeepCollectionEquality()
-                    .equals(other.failedValue, failedValue)));
+        (other.runtimeType == runtimeType &&
+            other is NotPositiveNumber<T> &&
+            const DeepCollectionEquality()
+                .equals(other.failedValue, failedValue));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(failedValue));
 
   @JsonKey(ignore: true)
   @override
@@ -785,6 +949,27 @@ class _$NotPositiveNumber<T> implements NotPositiveNumber<T> {
     required TResult Function(T? failedValue) confirmationNotMatch,
   }) {
     return notPositiveNumber(failedValue);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(T failedValue)? invalidEmail,
+    TResult Function(T failedValue)? shortPassword,
+    TResult Function(T? failedValue)? empty,
+    TResult Function(T? failedValue)? notPositiveNumber,
+    TResult Function(T? failedValue)? multiline,
+    TResult Function(T failedValue, int max)? listTooLong,
+    TResult Function(T failedValue, int min)? listTooShort,
+    TResult Function(T? failedValue)? unregisteredPhone,
+    TResult Function(T? failedValue)? invalidObject,
+    TResult Function()? emptyObject,
+    TResult Function(T? failedValue)? shortToken,
+    TResult Function(double failedValue, double maxBalance)? exceedingBalance,
+    TResult Function(T? failedValue)? noteExceed,
+    TResult Function(T? failedValue)? confirmationNotMatch,
+  }) {
+    return notPositiveNumber?.call(failedValue);
   }
 
   @override
@@ -836,6 +1021,27 @@ class _$NotPositiveNumber<T> implements NotPositiveNumber<T> {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(InvalidEmail<T> value)? invalidEmail,
+    TResult Function(ShortPassword<T> value)? shortPassword,
+    TResult Function(Empty<T> value)? empty,
+    TResult Function(NotPositiveNumber<T> value)? notPositiveNumber,
+    TResult Function(Multiline<T> value)? multiline,
+    TResult Function(ListTooLong<T> value)? listTooLong,
+    TResult Function(ListTooShort<T> value)? listTooShort,
+    TResult Function(UnregisteredPhone<T> value)? unregisteredPhone,
+    TResult Function(InvalidObject<T> value)? invalidObject,
+    TResult Function(EmptyObject<T> value)? emptyObject,
+    TResult Function(ShortToken<T> value)? shortToken,
+    TResult Function(ExceedBalance<T> value)? exceedingBalance,
+    TResult Function(NoteExceed<T> value)? noteExceed,
+    TResult Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
+  }) {
+    return notPositiveNumber?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(InvalidEmail<T> value)? invalidEmail,
     TResult Function(ShortPassword<T> value)? shortPassword,
@@ -864,7 +1070,7 @@ abstract class NotPositiveNumber<T> implements ValueFailure<T> {
   const factory NotPositiveNumber({required T? failedValue}) =
       _$NotPositiveNumber<T>;
 
-  T? get failedValue => throw _privateConstructorUsedError;
+  T? get failedValue;
   @JsonKey(ignore: true)
   $NotPositiveNumberCopyWith<T, NotPositiveNumber<T>> get copyWith =>
       throw _privateConstructorUsedError;
@@ -918,15 +1124,15 @@ class _$Multiline<T> implements Multiline<T> {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Multiline<T> &&
-            (identical(other.failedValue, failedValue) ||
-                const DeepCollectionEquality()
-                    .equals(other.failedValue, failedValue)));
+        (other.runtimeType == runtimeType &&
+            other is Multiline<T> &&
+            const DeepCollectionEquality()
+                .equals(other.failedValue, failedValue));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(failedValue));
 
   @JsonKey(ignore: true)
   @override
@@ -953,6 +1159,27 @@ class _$Multiline<T> implements Multiline<T> {
     required TResult Function(T? failedValue) confirmationNotMatch,
   }) {
     return multiline(failedValue);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(T failedValue)? invalidEmail,
+    TResult Function(T failedValue)? shortPassword,
+    TResult Function(T? failedValue)? empty,
+    TResult Function(T? failedValue)? notPositiveNumber,
+    TResult Function(T? failedValue)? multiline,
+    TResult Function(T failedValue, int max)? listTooLong,
+    TResult Function(T failedValue, int min)? listTooShort,
+    TResult Function(T? failedValue)? unregisteredPhone,
+    TResult Function(T? failedValue)? invalidObject,
+    TResult Function()? emptyObject,
+    TResult Function(T? failedValue)? shortToken,
+    TResult Function(double failedValue, double maxBalance)? exceedingBalance,
+    TResult Function(T? failedValue)? noteExceed,
+    TResult Function(T? failedValue)? confirmationNotMatch,
+  }) {
+    return multiline?.call(failedValue);
   }
 
   @override
@@ -1004,6 +1231,27 @@ class _$Multiline<T> implements Multiline<T> {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(InvalidEmail<T> value)? invalidEmail,
+    TResult Function(ShortPassword<T> value)? shortPassword,
+    TResult Function(Empty<T> value)? empty,
+    TResult Function(NotPositiveNumber<T> value)? notPositiveNumber,
+    TResult Function(Multiline<T> value)? multiline,
+    TResult Function(ListTooLong<T> value)? listTooLong,
+    TResult Function(ListTooShort<T> value)? listTooShort,
+    TResult Function(UnregisteredPhone<T> value)? unregisteredPhone,
+    TResult Function(InvalidObject<T> value)? invalidObject,
+    TResult Function(EmptyObject<T> value)? emptyObject,
+    TResult Function(ShortToken<T> value)? shortToken,
+    TResult Function(ExceedBalance<T> value)? exceedingBalance,
+    TResult Function(NoteExceed<T> value)? noteExceed,
+    TResult Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
+  }) {
+    return multiline?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(InvalidEmail<T> value)? invalidEmail,
     TResult Function(ShortPassword<T> value)? shortPassword,
@@ -1031,7 +1279,7 @@ class _$Multiline<T> implements Multiline<T> {
 abstract class Multiline<T> implements ValueFailure<T> {
   const factory Multiline({required T? failedValue}) = _$Multiline<T>;
 
-  T? get failedValue => throw _privateConstructorUsedError;
+  T? get failedValue;
   @JsonKey(ignore: true)
   $MultilineCopyWith<T, Multiline<T>> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1092,19 +1340,18 @@ class _$ListTooLong<T> implements ListTooLong<T> {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is ListTooLong<T> &&
-            (identical(other.failedValue, failedValue) ||
-                const DeepCollectionEquality()
-                    .equals(other.failedValue, failedValue)) &&
-            (identical(other.max, max) ||
-                const DeepCollectionEquality().equals(other.max, max)));
+        (other.runtimeType == runtimeType &&
+            other is ListTooLong<T> &&
+            const DeepCollectionEquality()
+                .equals(other.failedValue, failedValue) &&
+            const DeepCollectionEquality().equals(other.max, max));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(failedValue) ^
-      const DeepCollectionEquality().hash(max);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(failedValue),
+      const DeepCollectionEquality().hash(max));
 
   @JsonKey(ignore: true)
   @override
@@ -1131,6 +1378,27 @@ class _$ListTooLong<T> implements ListTooLong<T> {
     required TResult Function(T? failedValue) confirmationNotMatch,
   }) {
     return listTooLong(failedValue, max);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(T failedValue)? invalidEmail,
+    TResult Function(T failedValue)? shortPassword,
+    TResult Function(T? failedValue)? empty,
+    TResult Function(T? failedValue)? notPositiveNumber,
+    TResult Function(T? failedValue)? multiline,
+    TResult Function(T failedValue, int max)? listTooLong,
+    TResult Function(T failedValue, int min)? listTooShort,
+    TResult Function(T? failedValue)? unregisteredPhone,
+    TResult Function(T? failedValue)? invalidObject,
+    TResult Function()? emptyObject,
+    TResult Function(T? failedValue)? shortToken,
+    TResult Function(double failedValue, double maxBalance)? exceedingBalance,
+    TResult Function(T? failedValue)? noteExceed,
+    TResult Function(T? failedValue)? confirmationNotMatch,
+  }) {
+    return listTooLong?.call(failedValue, max);
   }
 
   @override
@@ -1182,6 +1450,27 @@ class _$ListTooLong<T> implements ListTooLong<T> {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(InvalidEmail<T> value)? invalidEmail,
+    TResult Function(ShortPassword<T> value)? shortPassword,
+    TResult Function(Empty<T> value)? empty,
+    TResult Function(NotPositiveNumber<T> value)? notPositiveNumber,
+    TResult Function(Multiline<T> value)? multiline,
+    TResult Function(ListTooLong<T> value)? listTooLong,
+    TResult Function(ListTooShort<T> value)? listTooShort,
+    TResult Function(UnregisteredPhone<T> value)? unregisteredPhone,
+    TResult Function(InvalidObject<T> value)? invalidObject,
+    TResult Function(EmptyObject<T> value)? emptyObject,
+    TResult Function(ShortToken<T> value)? shortToken,
+    TResult Function(ExceedBalance<T> value)? exceedingBalance,
+    TResult Function(NoteExceed<T> value)? noteExceed,
+    TResult Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
+  }) {
+    return listTooLong?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(InvalidEmail<T> value)? invalidEmail,
     TResult Function(ShortPassword<T> value)? shortPassword,
@@ -1210,8 +1499,8 @@ abstract class ListTooLong<T> implements ValueFailure<T> {
   const factory ListTooLong({required T failedValue, required int max}) =
       _$ListTooLong<T>;
 
-  T get failedValue => throw _privateConstructorUsedError;
-  int get max => throw _privateConstructorUsedError;
+  T get failedValue;
+  int get max;
   @JsonKey(ignore: true)
   $ListTooLongCopyWith<T, ListTooLong<T>> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1272,19 +1561,18 @@ class _$ListTooShort<T> implements ListTooShort<T> {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is ListTooShort<T> &&
-            (identical(other.failedValue, failedValue) ||
-                const DeepCollectionEquality()
-                    .equals(other.failedValue, failedValue)) &&
-            (identical(other.min, min) ||
-                const DeepCollectionEquality().equals(other.min, min)));
+        (other.runtimeType == runtimeType &&
+            other is ListTooShort<T> &&
+            const DeepCollectionEquality()
+                .equals(other.failedValue, failedValue) &&
+            const DeepCollectionEquality().equals(other.min, min));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(failedValue) ^
-      const DeepCollectionEquality().hash(min);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(failedValue),
+      const DeepCollectionEquality().hash(min));
 
   @JsonKey(ignore: true)
   @override
@@ -1311,6 +1599,27 @@ class _$ListTooShort<T> implements ListTooShort<T> {
     required TResult Function(T? failedValue) confirmationNotMatch,
   }) {
     return listTooShort(failedValue, min);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(T failedValue)? invalidEmail,
+    TResult Function(T failedValue)? shortPassword,
+    TResult Function(T? failedValue)? empty,
+    TResult Function(T? failedValue)? notPositiveNumber,
+    TResult Function(T? failedValue)? multiline,
+    TResult Function(T failedValue, int max)? listTooLong,
+    TResult Function(T failedValue, int min)? listTooShort,
+    TResult Function(T? failedValue)? unregisteredPhone,
+    TResult Function(T? failedValue)? invalidObject,
+    TResult Function()? emptyObject,
+    TResult Function(T? failedValue)? shortToken,
+    TResult Function(double failedValue, double maxBalance)? exceedingBalance,
+    TResult Function(T? failedValue)? noteExceed,
+    TResult Function(T? failedValue)? confirmationNotMatch,
+  }) {
+    return listTooShort?.call(failedValue, min);
   }
 
   @override
@@ -1362,6 +1671,27 @@ class _$ListTooShort<T> implements ListTooShort<T> {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(InvalidEmail<T> value)? invalidEmail,
+    TResult Function(ShortPassword<T> value)? shortPassword,
+    TResult Function(Empty<T> value)? empty,
+    TResult Function(NotPositiveNumber<T> value)? notPositiveNumber,
+    TResult Function(Multiline<T> value)? multiline,
+    TResult Function(ListTooLong<T> value)? listTooLong,
+    TResult Function(ListTooShort<T> value)? listTooShort,
+    TResult Function(UnregisteredPhone<T> value)? unregisteredPhone,
+    TResult Function(InvalidObject<T> value)? invalidObject,
+    TResult Function(EmptyObject<T> value)? emptyObject,
+    TResult Function(ShortToken<T> value)? shortToken,
+    TResult Function(ExceedBalance<T> value)? exceedingBalance,
+    TResult Function(NoteExceed<T> value)? noteExceed,
+    TResult Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
+  }) {
+    return listTooShort?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(InvalidEmail<T> value)? invalidEmail,
     TResult Function(ShortPassword<T> value)? shortPassword,
@@ -1390,8 +1720,8 @@ abstract class ListTooShort<T> implements ValueFailure<T> {
   const factory ListTooShort({required T failedValue, required int min}) =
       _$ListTooShort<T>;
 
-  T get failedValue => throw _privateConstructorUsedError;
-  int get min => throw _privateConstructorUsedError;
+  T get failedValue;
+  int get min;
   @JsonKey(ignore: true)
   $ListTooShortCopyWith<T, ListTooShort<T>> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1445,15 +1775,15 @@ class _$UnregisteredPhone<T> implements UnregisteredPhone<T> {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is UnregisteredPhone<T> &&
-            (identical(other.failedValue, failedValue) ||
-                const DeepCollectionEquality()
-                    .equals(other.failedValue, failedValue)));
+        (other.runtimeType == runtimeType &&
+            other is UnregisteredPhone<T> &&
+            const DeepCollectionEquality()
+                .equals(other.failedValue, failedValue));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(failedValue));
 
   @JsonKey(ignore: true)
   @override
@@ -1481,6 +1811,27 @@ class _$UnregisteredPhone<T> implements UnregisteredPhone<T> {
     required TResult Function(T? failedValue) confirmationNotMatch,
   }) {
     return unregisteredPhone(failedValue);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(T failedValue)? invalidEmail,
+    TResult Function(T failedValue)? shortPassword,
+    TResult Function(T? failedValue)? empty,
+    TResult Function(T? failedValue)? notPositiveNumber,
+    TResult Function(T? failedValue)? multiline,
+    TResult Function(T failedValue, int max)? listTooLong,
+    TResult Function(T failedValue, int min)? listTooShort,
+    TResult Function(T? failedValue)? unregisteredPhone,
+    TResult Function(T? failedValue)? invalidObject,
+    TResult Function()? emptyObject,
+    TResult Function(T? failedValue)? shortToken,
+    TResult Function(double failedValue, double maxBalance)? exceedingBalance,
+    TResult Function(T? failedValue)? noteExceed,
+    TResult Function(T? failedValue)? confirmationNotMatch,
+  }) {
+    return unregisteredPhone?.call(failedValue);
   }
 
   @override
@@ -1532,6 +1883,27 @@ class _$UnregisteredPhone<T> implements UnregisteredPhone<T> {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(InvalidEmail<T> value)? invalidEmail,
+    TResult Function(ShortPassword<T> value)? shortPassword,
+    TResult Function(Empty<T> value)? empty,
+    TResult Function(NotPositiveNumber<T> value)? notPositiveNumber,
+    TResult Function(Multiline<T> value)? multiline,
+    TResult Function(ListTooLong<T> value)? listTooLong,
+    TResult Function(ListTooShort<T> value)? listTooShort,
+    TResult Function(UnregisteredPhone<T> value)? unregisteredPhone,
+    TResult Function(InvalidObject<T> value)? invalidObject,
+    TResult Function(EmptyObject<T> value)? emptyObject,
+    TResult Function(ShortToken<T> value)? shortToken,
+    TResult Function(ExceedBalance<T> value)? exceedingBalance,
+    TResult Function(NoteExceed<T> value)? noteExceed,
+    TResult Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
+  }) {
+    return unregisteredPhone?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(InvalidEmail<T> value)? invalidEmail,
     TResult Function(ShortPassword<T> value)? shortPassword,
@@ -1560,7 +1932,7 @@ abstract class UnregisteredPhone<T> implements ValueFailure<T> {
   const factory UnregisteredPhone({required T? failedValue}) =
       _$UnregisteredPhone<T>;
 
-  T? get failedValue => throw _privateConstructorUsedError;
+  T? get failedValue;
   @JsonKey(ignore: true)
   $UnregisteredPhoneCopyWith<T, UnregisteredPhone<T>> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1614,15 +1986,15 @@ class _$InvalidObject<T> implements InvalidObject<T> {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is InvalidObject<T> &&
-            (identical(other.failedValue, failedValue) ||
-                const DeepCollectionEquality()
-                    .equals(other.failedValue, failedValue)));
+        (other.runtimeType == runtimeType &&
+            other is InvalidObject<T> &&
+            const DeepCollectionEquality()
+                .equals(other.failedValue, failedValue));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(failedValue));
 
   @JsonKey(ignore: true)
   @override
@@ -1649,6 +2021,27 @@ class _$InvalidObject<T> implements InvalidObject<T> {
     required TResult Function(T? failedValue) confirmationNotMatch,
   }) {
     return invalidObject(failedValue);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(T failedValue)? invalidEmail,
+    TResult Function(T failedValue)? shortPassword,
+    TResult Function(T? failedValue)? empty,
+    TResult Function(T? failedValue)? notPositiveNumber,
+    TResult Function(T? failedValue)? multiline,
+    TResult Function(T failedValue, int max)? listTooLong,
+    TResult Function(T failedValue, int min)? listTooShort,
+    TResult Function(T? failedValue)? unregisteredPhone,
+    TResult Function(T? failedValue)? invalidObject,
+    TResult Function()? emptyObject,
+    TResult Function(T? failedValue)? shortToken,
+    TResult Function(double failedValue, double maxBalance)? exceedingBalance,
+    TResult Function(T? failedValue)? noteExceed,
+    TResult Function(T? failedValue)? confirmationNotMatch,
+  }) {
+    return invalidObject?.call(failedValue);
   }
 
   @override
@@ -1700,6 +2093,27 @@ class _$InvalidObject<T> implements InvalidObject<T> {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(InvalidEmail<T> value)? invalidEmail,
+    TResult Function(ShortPassword<T> value)? shortPassword,
+    TResult Function(Empty<T> value)? empty,
+    TResult Function(NotPositiveNumber<T> value)? notPositiveNumber,
+    TResult Function(Multiline<T> value)? multiline,
+    TResult Function(ListTooLong<T> value)? listTooLong,
+    TResult Function(ListTooShort<T> value)? listTooShort,
+    TResult Function(UnregisteredPhone<T> value)? unregisteredPhone,
+    TResult Function(InvalidObject<T> value)? invalidObject,
+    TResult Function(EmptyObject<T> value)? emptyObject,
+    TResult Function(ShortToken<T> value)? shortToken,
+    TResult Function(ExceedBalance<T> value)? exceedingBalance,
+    TResult Function(NoteExceed<T> value)? noteExceed,
+    TResult Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
+  }) {
+    return invalidObject?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(InvalidEmail<T> value)? invalidEmail,
     TResult Function(ShortPassword<T> value)? shortPassword,
@@ -1727,7 +2141,7 @@ class _$InvalidObject<T> implements InvalidObject<T> {
 abstract class InvalidObject<T> implements ValueFailure<T> {
   const factory InvalidObject({required T? failedValue}) = _$InvalidObject<T>;
 
-  T? get failedValue => throw _privateConstructorUsedError;
+  T? get failedValue;
   @JsonKey(ignore: true)
   $InvalidObjectCopyWith<T, InvalidObject<T>> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1764,7 +2178,8 @@ class _$EmptyObject<T> implements EmptyObject<T> {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is EmptyObject<T>);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is EmptyObject<T>);
   }
 
   @override
@@ -1790,6 +2205,27 @@ class _$EmptyObject<T> implements EmptyObject<T> {
     required TResult Function(T? failedValue) confirmationNotMatch,
   }) {
     return emptyObject();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(T failedValue)? invalidEmail,
+    TResult Function(T failedValue)? shortPassword,
+    TResult Function(T? failedValue)? empty,
+    TResult Function(T? failedValue)? notPositiveNumber,
+    TResult Function(T? failedValue)? multiline,
+    TResult Function(T failedValue, int max)? listTooLong,
+    TResult Function(T failedValue, int min)? listTooShort,
+    TResult Function(T? failedValue)? unregisteredPhone,
+    TResult Function(T? failedValue)? invalidObject,
+    TResult Function()? emptyObject,
+    TResult Function(T? failedValue)? shortToken,
+    TResult Function(double failedValue, double maxBalance)? exceedingBalance,
+    TResult Function(T? failedValue)? noteExceed,
+    TResult Function(T? failedValue)? confirmationNotMatch,
+  }) {
+    return emptyObject?.call();
   }
 
   @override
@@ -1837,6 +2273,27 @@ class _$EmptyObject<T> implements EmptyObject<T> {
         confirmationNotMatch,
   }) {
     return emptyObject(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(InvalidEmail<T> value)? invalidEmail,
+    TResult Function(ShortPassword<T> value)? shortPassword,
+    TResult Function(Empty<T> value)? empty,
+    TResult Function(NotPositiveNumber<T> value)? notPositiveNumber,
+    TResult Function(Multiline<T> value)? multiline,
+    TResult Function(ListTooLong<T> value)? listTooLong,
+    TResult Function(ListTooShort<T> value)? listTooShort,
+    TResult Function(UnregisteredPhone<T> value)? unregisteredPhone,
+    TResult Function(InvalidObject<T> value)? invalidObject,
+    TResult Function(EmptyObject<T> value)? emptyObject,
+    TResult Function(ShortToken<T> value)? shortToken,
+    TResult Function(ExceedBalance<T> value)? exceedingBalance,
+    TResult Function(NoteExceed<T> value)? noteExceed,
+    TResult Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
+  }) {
+    return emptyObject?.call(this);
   }
 
   @override
@@ -1917,15 +2374,15 @@ class _$ShortToken<T> implements ShortToken<T> {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is ShortToken<T> &&
-            (identical(other.failedValue, failedValue) ||
-                const DeepCollectionEquality()
-                    .equals(other.failedValue, failedValue)));
+        (other.runtimeType == runtimeType &&
+            other is ShortToken<T> &&
+            const DeepCollectionEquality()
+                .equals(other.failedValue, failedValue));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(failedValue));
 
   @JsonKey(ignore: true)
   @override
@@ -1952,6 +2409,27 @@ class _$ShortToken<T> implements ShortToken<T> {
     required TResult Function(T? failedValue) confirmationNotMatch,
   }) {
     return shortToken(failedValue);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(T failedValue)? invalidEmail,
+    TResult Function(T failedValue)? shortPassword,
+    TResult Function(T? failedValue)? empty,
+    TResult Function(T? failedValue)? notPositiveNumber,
+    TResult Function(T? failedValue)? multiline,
+    TResult Function(T failedValue, int max)? listTooLong,
+    TResult Function(T failedValue, int min)? listTooShort,
+    TResult Function(T? failedValue)? unregisteredPhone,
+    TResult Function(T? failedValue)? invalidObject,
+    TResult Function()? emptyObject,
+    TResult Function(T? failedValue)? shortToken,
+    TResult Function(double failedValue, double maxBalance)? exceedingBalance,
+    TResult Function(T? failedValue)? noteExceed,
+    TResult Function(T? failedValue)? confirmationNotMatch,
+  }) {
+    return shortToken?.call(failedValue);
   }
 
   @override
@@ -2003,6 +2481,27 @@ class _$ShortToken<T> implements ShortToken<T> {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(InvalidEmail<T> value)? invalidEmail,
+    TResult Function(ShortPassword<T> value)? shortPassword,
+    TResult Function(Empty<T> value)? empty,
+    TResult Function(NotPositiveNumber<T> value)? notPositiveNumber,
+    TResult Function(Multiline<T> value)? multiline,
+    TResult Function(ListTooLong<T> value)? listTooLong,
+    TResult Function(ListTooShort<T> value)? listTooShort,
+    TResult Function(UnregisteredPhone<T> value)? unregisteredPhone,
+    TResult Function(InvalidObject<T> value)? invalidObject,
+    TResult Function(EmptyObject<T> value)? emptyObject,
+    TResult Function(ShortToken<T> value)? shortToken,
+    TResult Function(ExceedBalance<T> value)? exceedingBalance,
+    TResult Function(NoteExceed<T> value)? noteExceed,
+    TResult Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
+  }) {
+    return shortToken?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(InvalidEmail<T> value)? invalidEmail,
     TResult Function(ShortPassword<T> value)? shortPassword,
@@ -2030,7 +2529,7 @@ class _$ShortToken<T> implements ShortToken<T> {
 abstract class ShortToken<T> implements ValueFailure<T> {
   const factory ShortToken({required T? failedValue}) = _$ShortToken<T>;
 
-  T? get failedValue => throw _privateConstructorUsedError;
+  T? get failedValue;
   @JsonKey(ignore: true)
   $ShortTokenCopyWith<T, ShortToken<T>> get copyWith =>
       throw _privateConstructorUsedError;
@@ -2091,20 +2590,19 @@ class _$ExceedBalance<T> implements ExceedBalance<T> {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is ExceedBalance<T> &&
-            (identical(other.failedValue, failedValue) ||
-                const DeepCollectionEquality()
-                    .equals(other.failedValue, failedValue)) &&
-            (identical(other.maxBalance, maxBalance) ||
-                const DeepCollectionEquality()
-                    .equals(other.maxBalance, maxBalance)));
+        (other.runtimeType == runtimeType &&
+            other is ExceedBalance<T> &&
+            const DeepCollectionEquality()
+                .equals(other.failedValue, failedValue) &&
+            const DeepCollectionEquality()
+                .equals(other.maxBalance, maxBalance));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(failedValue) ^
-      const DeepCollectionEquality().hash(maxBalance);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(failedValue),
+      const DeepCollectionEquality().hash(maxBalance));
 
   @JsonKey(ignore: true)
   @override
@@ -2131,6 +2629,27 @@ class _$ExceedBalance<T> implements ExceedBalance<T> {
     required TResult Function(T? failedValue) confirmationNotMatch,
   }) {
     return exceedingBalance(failedValue, maxBalance);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(T failedValue)? invalidEmail,
+    TResult Function(T failedValue)? shortPassword,
+    TResult Function(T? failedValue)? empty,
+    TResult Function(T? failedValue)? notPositiveNumber,
+    TResult Function(T? failedValue)? multiline,
+    TResult Function(T failedValue, int max)? listTooLong,
+    TResult Function(T failedValue, int min)? listTooShort,
+    TResult Function(T? failedValue)? unregisteredPhone,
+    TResult Function(T? failedValue)? invalidObject,
+    TResult Function()? emptyObject,
+    TResult Function(T? failedValue)? shortToken,
+    TResult Function(double failedValue, double maxBalance)? exceedingBalance,
+    TResult Function(T? failedValue)? noteExceed,
+    TResult Function(T? failedValue)? confirmationNotMatch,
+  }) {
+    return exceedingBalance?.call(failedValue, maxBalance);
   }
 
   @override
@@ -2182,6 +2701,27 @@ class _$ExceedBalance<T> implements ExceedBalance<T> {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(InvalidEmail<T> value)? invalidEmail,
+    TResult Function(ShortPassword<T> value)? shortPassword,
+    TResult Function(Empty<T> value)? empty,
+    TResult Function(NotPositiveNumber<T> value)? notPositiveNumber,
+    TResult Function(Multiline<T> value)? multiline,
+    TResult Function(ListTooLong<T> value)? listTooLong,
+    TResult Function(ListTooShort<T> value)? listTooShort,
+    TResult Function(UnregisteredPhone<T> value)? unregisteredPhone,
+    TResult Function(InvalidObject<T> value)? invalidObject,
+    TResult Function(EmptyObject<T> value)? emptyObject,
+    TResult Function(ShortToken<T> value)? shortToken,
+    TResult Function(ExceedBalance<T> value)? exceedingBalance,
+    TResult Function(NoteExceed<T> value)? noteExceed,
+    TResult Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
+  }) {
+    return exceedingBalance?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(InvalidEmail<T> value)? invalidEmail,
     TResult Function(ShortPassword<T> value)? shortPassword,
@@ -2211,8 +2751,8 @@ abstract class ExceedBalance<T> implements ValueFailure<T> {
       {required double failedValue,
       required double maxBalance}) = _$ExceedBalance<T>;
 
-  double get failedValue => throw _privateConstructorUsedError;
-  double get maxBalance => throw _privateConstructorUsedError;
+  double get failedValue;
+  double get maxBalance;
   @JsonKey(ignore: true)
   $ExceedBalanceCopyWith<T, ExceedBalance<T>> get copyWith =>
       throw _privateConstructorUsedError;
@@ -2266,15 +2806,15 @@ class _$NoteExceed<T> implements NoteExceed<T> {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is NoteExceed<T> &&
-            (identical(other.failedValue, failedValue) ||
-                const DeepCollectionEquality()
-                    .equals(other.failedValue, failedValue)));
+        (other.runtimeType == runtimeType &&
+            other is NoteExceed<T> &&
+            const DeepCollectionEquality()
+                .equals(other.failedValue, failedValue));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(failedValue));
 
   @JsonKey(ignore: true)
   @override
@@ -2301,6 +2841,27 @@ class _$NoteExceed<T> implements NoteExceed<T> {
     required TResult Function(T? failedValue) confirmationNotMatch,
   }) {
     return noteExceed(failedValue);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(T failedValue)? invalidEmail,
+    TResult Function(T failedValue)? shortPassword,
+    TResult Function(T? failedValue)? empty,
+    TResult Function(T? failedValue)? notPositiveNumber,
+    TResult Function(T? failedValue)? multiline,
+    TResult Function(T failedValue, int max)? listTooLong,
+    TResult Function(T failedValue, int min)? listTooShort,
+    TResult Function(T? failedValue)? unregisteredPhone,
+    TResult Function(T? failedValue)? invalidObject,
+    TResult Function()? emptyObject,
+    TResult Function(T? failedValue)? shortToken,
+    TResult Function(double failedValue, double maxBalance)? exceedingBalance,
+    TResult Function(T? failedValue)? noteExceed,
+    TResult Function(T? failedValue)? confirmationNotMatch,
+  }) {
+    return noteExceed?.call(failedValue);
   }
 
   @override
@@ -2352,6 +2913,27 @@ class _$NoteExceed<T> implements NoteExceed<T> {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(InvalidEmail<T> value)? invalidEmail,
+    TResult Function(ShortPassword<T> value)? shortPassword,
+    TResult Function(Empty<T> value)? empty,
+    TResult Function(NotPositiveNumber<T> value)? notPositiveNumber,
+    TResult Function(Multiline<T> value)? multiline,
+    TResult Function(ListTooLong<T> value)? listTooLong,
+    TResult Function(ListTooShort<T> value)? listTooShort,
+    TResult Function(UnregisteredPhone<T> value)? unregisteredPhone,
+    TResult Function(InvalidObject<T> value)? invalidObject,
+    TResult Function(EmptyObject<T> value)? emptyObject,
+    TResult Function(ShortToken<T> value)? shortToken,
+    TResult Function(ExceedBalance<T> value)? exceedingBalance,
+    TResult Function(NoteExceed<T> value)? noteExceed,
+    TResult Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
+  }) {
+    return noteExceed?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(InvalidEmail<T> value)? invalidEmail,
     TResult Function(ShortPassword<T> value)? shortPassword,
@@ -2379,7 +2961,7 @@ class _$NoteExceed<T> implements NoteExceed<T> {
 abstract class NoteExceed<T> implements ValueFailure<T> {
   const factory NoteExceed({required T? failedValue}) = _$NoteExceed<T>;
 
-  T? get failedValue => throw _privateConstructorUsedError;
+  T? get failedValue;
   @JsonKey(ignore: true)
   $NoteExceedCopyWith<T, NoteExceed<T>> get copyWith =>
       throw _privateConstructorUsedError;
@@ -2433,15 +3015,15 @@ class _$ConfirmationNotMatch<T> implements ConfirmationNotMatch<T> {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is ConfirmationNotMatch<T> &&
-            (identical(other.failedValue, failedValue) ||
-                const DeepCollectionEquality()
-                    .equals(other.failedValue, failedValue)));
+        (other.runtimeType == runtimeType &&
+            other is ConfirmationNotMatch<T> &&
+            const DeepCollectionEquality()
+                .equals(other.failedValue, failedValue));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(failedValue));
 
   @JsonKey(ignore: true)
   @override
@@ -2469,6 +3051,27 @@ class _$ConfirmationNotMatch<T> implements ConfirmationNotMatch<T> {
     required TResult Function(T? failedValue) confirmationNotMatch,
   }) {
     return confirmationNotMatch(failedValue);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(T failedValue)? invalidEmail,
+    TResult Function(T failedValue)? shortPassword,
+    TResult Function(T? failedValue)? empty,
+    TResult Function(T? failedValue)? notPositiveNumber,
+    TResult Function(T? failedValue)? multiline,
+    TResult Function(T failedValue, int max)? listTooLong,
+    TResult Function(T failedValue, int min)? listTooShort,
+    TResult Function(T? failedValue)? unregisteredPhone,
+    TResult Function(T? failedValue)? invalidObject,
+    TResult Function()? emptyObject,
+    TResult Function(T? failedValue)? shortToken,
+    TResult Function(double failedValue, double maxBalance)? exceedingBalance,
+    TResult Function(T? failedValue)? noteExceed,
+    TResult Function(T? failedValue)? confirmationNotMatch,
+  }) {
+    return confirmationNotMatch?.call(failedValue);
   }
 
   @override
@@ -2520,6 +3123,27 @@ class _$ConfirmationNotMatch<T> implements ConfirmationNotMatch<T> {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(InvalidEmail<T> value)? invalidEmail,
+    TResult Function(ShortPassword<T> value)? shortPassword,
+    TResult Function(Empty<T> value)? empty,
+    TResult Function(NotPositiveNumber<T> value)? notPositiveNumber,
+    TResult Function(Multiline<T> value)? multiline,
+    TResult Function(ListTooLong<T> value)? listTooLong,
+    TResult Function(ListTooShort<T> value)? listTooShort,
+    TResult Function(UnregisteredPhone<T> value)? unregisteredPhone,
+    TResult Function(InvalidObject<T> value)? invalidObject,
+    TResult Function(EmptyObject<T> value)? emptyObject,
+    TResult Function(ShortToken<T> value)? shortToken,
+    TResult Function(ExceedBalance<T> value)? exceedingBalance,
+    TResult Function(NoteExceed<T> value)? noteExceed,
+    TResult Function(ConfirmationNotMatch<T> value)? confirmationNotMatch,
+  }) {
+    return confirmationNotMatch?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(InvalidEmail<T> value)? invalidEmail,
     TResult Function(ShortPassword<T> value)? shortPassword,
@@ -2548,7 +3172,7 @@ abstract class ConfirmationNotMatch<T> implements ValueFailure<T> {
   const factory ConfirmationNotMatch({required T? failedValue}) =
       _$ConfirmationNotMatch<T>;
 
-  T? get failedValue => throw _privateConstructorUsedError;
+  T? get failedValue;
   @JsonKey(ignore: true)
   $ConfirmationNotMatchCopyWith<T, ConfirmationNotMatch<T>> get copyWith =>
       throw _privateConstructorUsedError;

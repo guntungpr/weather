@@ -1,117 +1,78 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+part 'weather_model.freezed.dart';
 part 'weather_model.g.dart';
 
-@JsonSerializable()
-class WeatherModel {
-  final Coord coord;
-  final List<Weather> weather;
-  final Main main;
-  final Wind wind;
-  final Sys sys;
-  final int dt;
-  final int timezone;
-  final String name;
-  final int cod;
+@freezed
+class WeatherModel with _$WeatherModel {
+  const factory WeatherModel({
+    required Coord coord,
+    required List<Weather> weather,
+    required Main main,
+    required Wind wind,
+    required Sys sys,
+    required int dt,
+    required int timezone,
+    required String name,
+    required int cod,
+  }) = _WeatherModel;
 
-  WeatherModel({
-    required this.coord,
-    required this.weather,
-    required this.main,
-    required this.wind,
-    required this.sys,
-    required this.dt,
-    required this.timezone,
-    required this.name,
-    required this.cod,
-  });
-
-  factory WeatherModel.fromJson(Map<String, dynamic> json) =>
-      _$WeatherModelFromJson(json);
-  Map<String, dynamic> toJson() => _$WeatherModelToJson(this);
+  factory WeatherModel.fromJson(Map<String, dynamic> json) => _$WeatherModelFromJson(json);
 }
 
-@JsonSerializable()
-class Coord {
-  final double lat;
-  final double lon;
-
-  Coord({
-    required this.lat,
-    required this.lon,
-  });
+@freezed
+class Coord with _$Coord {
+  const factory Coord({
+    required double lat,
+    required double lon,
+  }) = _Coord;
 
   factory Coord.fromJson(Map<String, dynamic> json) => _$CoordFromJson(json);
-  Map<String, dynamic> toJson() => _$CoordToJson(this);
 }
 
-@JsonSerializable()
-class Weather {
-  int id;
-  String main;
-  String description;
-  String icon;
+@freezed
+class Weather with _$Weather {
+  const factory Weather({
+    required int id,
+    required String main,
+    required String description,
+    required String icon,
+  }) = _Weather;
 
-  Weather({
-    required this.id,
-    required this.main,
-    required this.description,
-    required this.icon,
-  });
-
-  factory Weather.fromJson(Map<String, dynamic> json) =>
-      _$WeatherFromJson(json);
-  Map<String, dynamic> toJson() => _$WeatherToJson(this);
+  factory Weather.fromJson(Map<String, dynamic> json) => _$WeatherFromJson(json);
 }
 
-@JsonSerializable()
-class Main {
-  double temp;
-  double feels_like;
-  double temp_min;
-  double temp_max;
-  int pressure;
-  int humidity;
-
-  Main({
-    required this.temp,
-    required this.feels_like,
-    required this.temp_min,
-    required this.temp_max,
-    required this.pressure,
-    required this.humidity,
-  });
+@freezed
+class Main with _$Main {
+  const factory Main({
+    required double temp,
+    required double feels_like,
+    required double temp_min,
+    required double temp_max,
+    required int pressure,
+    required int humidity,
+  }) = _Main;
 
   factory Main.fromJson(Map<String, dynamic> json) => _$MainFromJson(json);
-  Map<String, dynamic> toJson() => _$MainToJson(this);
 }
 
-@JsonSerializable()
-class Wind {
-  final double speed;
-  final double deg;
-
-  Wind({
-    required this.speed,
-    required this.deg,
-  });
+@freezed
+class Wind with _$Wind {
+  const factory Wind({
+    required double speed,
+    required double deg,
+  }) = _Wind;
 
   factory Wind.fromJson(Map<String, dynamic> json) => _$WindFromJson(json);
-  Map<String, dynamic> toJson() => _$WindToJson(this);
 }
 
-@JsonSerializable()
-class Sys {
-  String country;
-  int sunrise;
-  int sunset;
-
-  Sys({
-    required this.country,
-    required this.sunrise,
-    required this.sunset,
-  });
+@freezed
+class Sys with _$Sys {
+  const factory Sys({
+    required String country,
+    required int sunrise,
+    required int sunset,
+  }) = _Sys;
 
   factory Sys.fromJson(Map<String, dynamic> json) => _$SysFromJson(json);
-  Map<String, dynamic> toJson() => _$SysToJson(this);
 }

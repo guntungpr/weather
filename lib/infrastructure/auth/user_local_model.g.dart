@@ -6,17 +6,14 @@ part of 'user_local_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-UserLocalModel _$UserLocalModelFromJson(Map<String, dynamic> json) {
-  return UserLocalModel(
-    name: json['name'] as String? ?? 'member_name',
-    phone: json['phone'] as String,
-    address: json['address'] as String,
-  );
-}
+_$_UserLocalModel _$$_UserLocalModelFromJson(Map<String, dynamic> json) =>
+    _$_UserLocalModel(
+      name: json['name'] as String,
+      email: json['email'] as String,
+    );
 
-Map<String, dynamic> _$UserLocalModelToJson(UserLocalModel instance) =>
+Map<String, dynamic> _$$_UserLocalModelToJson(_$_UserLocalModel instance) =>
     <String, dynamic>{
       'name': instance.name,
-      'phone': instance.phone,
-      'address': instance.address,
+      'email': instance.email,
     };

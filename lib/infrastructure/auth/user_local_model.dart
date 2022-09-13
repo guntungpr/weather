@@ -1,27 +1,16 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+part 'user_local_model.freezed.dart';
 part 'user_local_model.g.dart';
 
-@JsonSerializable()
-class UserLocalModel {
-  @JsonKey(defaultValue: 'member_name')
-  final String name;
-  final String phone;
-  final String address;
+@freezed
+class UserLocalModel with _$UserLocalModel {
+  factory UserLocalModel({
+    required String name,
+    required String email,
+  }) = _UserLocalModel;
 
-  UserLocalModel({
-    required this.name,
-    required this.phone,
-    required this.address,
-  });
+  factory UserLocalModel.fromJson(Map<String, dynamic> json) => _$UserLocalModelFromJson(json);
 
-  // factory UserLocalModel.fromJson(Map<String, dynamic> json) => UserLocalModel(
-  //       name: json["member_name"].toString(),
-  //       phone: json["phone"].toString(),
-  //       address: json["address"].toString(),
-  //     );
-
-  factory UserLocalModel.fromJson(Map<String, dynamic> json) =>
-      _$UserLocalModelFromJson(json);
-  Map<String, dynamic> toJson() => _$UserLocalModelToJson(this);
+  factory UserLocalModel.empty() => UserLocalModel(name: '', email: '');
 }

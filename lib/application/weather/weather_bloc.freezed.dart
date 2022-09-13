@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'weather_bloc.dart';
 
@@ -15,6 +17,10 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 class _$WeatherEventTearOff {
   const _$WeatherEventTearOff();
+
+  Initial initial() {
+    return const Initial();
+  }
 
   InputCity inputCity(String inputCity) {
     return InputCity(
@@ -40,13 +46,23 @@ const $WeatherEvent = _$WeatherEventTearOff();
 mixin _$WeatherEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() initial,
     required TResult Function(String inputCity) inputCity,
     required TResult Function() searchWeather,
     required TResult Function(double temp) calculateTemp,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String inputCity)? inputCity,
+    TResult Function()? searchWeather,
+    TResult Function(double temp)? calculateTemp,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
     TResult Function(String inputCity)? inputCity,
     TResult Function()? searchWeather,
     TResult Function(double temp)? calculateTemp,
@@ -55,13 +71,23 @@ mixin _$WeatherEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
     required TResult Function(InputCity value) inputCity,
     required TResult Function(SearchWeather value) searchWeather,
     required TResult Function(CalculateTemp value) calculateTemp,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(InputCity value)? inputCity,
+    TResult Function(SearchWeather value)? searchWeather,
+    TResult Function(CalculateTemp value)? calculateTemp,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
     TResult Function(InputCity value)? inputCity,
     TResult Function(SearchWeather value)? searchWeather,
     TResult Function(CalculateTemp value)? calculateTemp,
@@ -84,6 +110,120 @@ class _$WeatherEventCopyWithImpl<$Res> implements $WeatherEventCopyWith<$Res> {
   final WeatherEvent _value;
   // ignore: unused_field
   final $Res Function(WeatherEvent) _then;
+}
+
+/// @nodoc
+abstract class $InitialCopyWith<$Res> {
+  factory $InitialCopyWith(Initial value, $Res Function(Initial) then) =
+      _$InitialCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$InitialCopyWithImpl<$Res> extends _$WeatherEventCopyWithImpl<$Res>
+    implements $InitialCopyWith<$Res> {
+  _$InitialCopyWithImpl(Initial _value, $Res Function(Initial) _then)
+      : super(_value, (v) => _then(v as Initial));
+
+  @override
+  Initial get _value => super._value as Initial;
+}
+
+/// @nodoc
+
+class _$Initial implements Initial {
+  const _$Initial();
+
+  @override
+  String toString() {
+    return 'WeatherEvent.initial()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is Initial);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String inputCity) inputCity,
+    required TResult Function() searchWeather,
+    required TResult Function(double temp) calculateTemp,
+  }) {
+    return initial();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String inputCity)? inputCity,
+    TResult Function()? searchWeather,
+    TResult Function(double temp)? calculateTemp,
+  }) {
+    return initial?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String inputCity)? inputCity,
+    TResult Function()? searchWeather,
+    TResult Function(double temp)? calculateTemp,
+    required TResult orElse(),
+  }) {
+    if (initial != null) {
+      return initial();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(InputCity value) inputCity,
+    required TResult Function(SearchWeather value) searchWeather,
+    required TResult Function(CalculateTemp value) calculateTemp,
+  }) {
+    return initial(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(InputCity value)? inputCity,
+    TResult Function(SearchWeather value)? searchWeather,
+    TResult Function(CalculateTemp value)? calculateTemp,
+  }) {
+    return initial?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(InputCity value)? inputCity,
+    TResult Function(SearchWeather value)? searchWeather,
+    TResult Function(CalculateTemp value)? calculateTemp,
+    required TResult orElse(),
+  }) {
+    if (initial != null) {
+      return initial(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class Initial implements WeatherEvent {
+  const factory Initial() = _$Initial;
 }
 
 /// @nodoc
@@ -131,15 +271,14 @@ class _$InputCity implements InputCity {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is InputCity &&
-            (identical(other.inputCity, inputCity) ||
-                const DeepCollectionEquality()
-                    .equals(other.inputCity, inputCity)));
+        (other.runtimeType == runtimeType &&
+            other is InputCity &&
+            const DeepCollectionEquality().equals(other.inputCity, inputCity));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(inputCity);
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(inputCity));
 
   @JsonKey(ignore: true)
   @override
@@ -149,6 +288,7 @@ class _$InputCity implements InputCity {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() initial,
     required TResult Function(String inputCity) inputCity,
     required TResult Function() searchWeather,
     required TResult Function(double temp) calculateTemp,
@@ -158,7 +298,19 @@ class _$InputCity implements InputCity {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String inputCity)? inputCity,
+    TResult Function()? searchWeather,
+    TResult Function(double temp)? calculateTemp,
+  }) {
+    return inputCity?.call(this.inputCity);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
     TResult Function(String inputCity)? inputCity,
     TResult Function()? searchWeather,
     TResult Function(double temp)? calculateTemp,
@@ -173,6 +325,7 @@ class _$InputCity implements InputCity {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
     required TResult Function(InputCity value) inputCity,
     required TResult Function(SearchWeather value) searchWeather,
     required TResult Function(CalculateTemp value) calculateTemp,
@@ -182,7 +335,19 @@ class _$InputCity implements InputCity {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(InputCity value)? inputCity,
+    TResult Function(SearchWeather value)? searchWeather,
+    TResult Function(CalculateTemp value)? calculateTemp,
+  }) {
+    return inputCity?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
     TResult Function(InputCity value)? inputCity,
     TResult Function(SearchWeather value)? searchWeather,
     TResult Function(CalculateTemp value)? calculateTemp,
@@ -198,7 +363,7 @@ class _$InputCity implements InputCity {
 abstract class InputCity implements WeatherEvent {
   const factory InputCity(String inputCity) = _$InputCity;
 
-  String get inputCity => throw _privateConstructorUsedError;
+  String get inputCity;
   @JsonKey(ignore: true)
   $InputCityCopyWith<InputCity> get copyWith =>
       throw _privateConstructorUsedError;
@@ -234,7 +399,8 @@ class _$SearchWeather implements SearchWeather {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is SearchWeather);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is SearchWeather);
   }
 
   @override
@@ -243,6 +409,7 @@ class _$SearchWeather implements SearchWeather {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() initial,
     required TResult Function(String inputCity) inputCity,
     required TResult Function() searchWeather,
     required TResult Function(double temp) calculateTemp,
@@ -252,7 +419,19 @@ class _$SearchWeather implements SearchWeather {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String inputCity)? inputCity,
+    TResult Function()? searchWeather,
+    TResult Function(double temp)? calculateTemp,
+  }) {
+    return searchWeather?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
     TResult Function(String inputCity)? inputCity,
     TResult Function()? searchWeather,
     TResult Function(double temp)? calculateTemp,
@@ -267,6 +446,7 @@ class _$SearchWeather implements SearchWeather {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
     required TResult Function(InputCity value) inputCity,
     required TResult Function(SearchWeather value) searchWeather,
     required TResult Function(CalculateTemp value) calculateTemp,
@@ -276,7 +456,19 @@ class _$SearchWeather implements SearchWeather {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(InputCity value)? inputCity,
+    TResult Function(SearchWeather value)? searchWeather,
+    TResult Function(CalculateTemp value)? calculateTemp,
+  }) {
+    return searchWeather?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
     TResult Function(InputCity value)? inputCity,
     TResult Function(SearchWeather value)? searchWeather,
     TResult Function(CalculateTemp value)? calculateTemp,
@@ -340,14 +532,14 @@ class _$CalculateTemp implements CalculateTemp {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is CalculateTemp &&
-            (identical(other.temp, temp) ||
-                const DeepCollectionEquality().equals(other.temp, temp)));
+        (other.runtimeType == runtimeType &&
+            other is CalculateTemp &&
+            const DeepCollectionEquality().equals(other.temp, temp));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(temp);
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(temp));
 
   @JsonKey(ignore: true)
   @override
@@ -357,6 +549,7 @@ class _$CalculateTemp implements CalculateTemp {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() initial,
     required TResult Function(String inputCity) inputCity,
     required TResult Function() searchWeather,
     required TResult Function(double temp) calculateTemp,
@@ -366,7 +559,19 @@ class _$CalculateTemp implements CalculateTemp {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String inputCity)? inputCity,
+    TResult Function()? searchWeather,
+    TResult Function(double temp)? calculateTemp,
+  }) {
+    return calculateTemp?.call(temp);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
     TResult Function(String inputCity)? inputCity,
     TResult Function()? searchWeather,
     TResult Function(double temp)? calculateTemp,
@@ -381,6 +586,7 @@ class _$CalculateTemp implements CalculateTemp {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
     required TResult Function(InputCity value) inputCity,
     required TResult Function(SearchWeather value) searchWeather,
     required TResult Function(CalculateTemp value) calculateTemp,
@@ -390,7 +596,19 @@ class _$CalculateTemp implements CalculateTemp {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(InputCity value)? inputCity,
+    TResult Function(SearchWeather value)? searchWeather,
+    TResult Function(CalculateTemp value)? calculateTemp,
+  }) {
+    return calculateTemp?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
     TResult Function(InputCity value)? inputCity,
     TResult Function(SearchWeather value)? searchWeather,
     TResult Function(CalculateTemp value)? calculateTemp,
@@ -406,7 +624,7 @@ class _$CalculateTemp implements CalculateTemp {
 abstract class CalculateTemp implements WeatherEvent {
   const factory CalculateTemp(double temp) = _$CalculateTemp;
 
-  double get temp => throw _privateConstructorUsedError;
+  double get temp;
   @JsonKey(ignore: true)
   $CalculateTempCopyWith<CalculateTemp> get copyWith =>
       throw _privateConstructorUsedError;
@@ -573,27 +791,23 @@ class _$_WeatherState implements _WeatherState {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _WeatherState &&
-            (identical(other.optionFailureOrSuccess, optionFailureOrSuccess) ||
-                const DeepCollectionEquality().equals(
-                    other.optionFailureOrSuccess, optionFailureOrSuccess)) &&
-            (identical(other.city, city) ||
-                const DeepCollectionEquality().equals(other.city, city)) &&
-            (identical(other.isLoading, isLoading) ||
-                const DeepCollectionEquality()
-                    .equals(other.isLoading, isLoading)) &&
-            (identical(other.kelvinToCelcius, kelvinToCelcius) ||
-                const DeepCollectionEquality()
-                    .equals(other.kelvinToCelcius, kelvinToCelcius)));
+        (other.runtimeType == runtimeType &&
+            other is _WeatherState &&
+            const DeepCollectionEquality()
+                .equals(other.optionFailureOrSuccess, optionFailureOrSuccess) &&
+            const DeepCollectionEquality().equals(other.city, city) &&
+            const DeepCollectionEquality().equals(other.isLoading, isLoading) &&
+            const DeepCollectionEquality()
+                .equals(other.kelvinToCelcius, kelvinToCelcius));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(optionFailureOrSuccess) ^
-      const DeepCollectionEquality().hash(city) ^
-      const DeepCollectionEquality().hash(isLoading) ^
-      const DeepCollectionEquality().hash(kelvinToCelcius);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(optionFailureOrSuccess),
+      const DeepCollectionEquality().hash(city),
+      const DeepCollectionEquality().hash(isLoading),
+      const DeepCollectionEquality().hash(kelvinToCelcius));
 
   @JsonKey(ignore: true)
   @override
@@ -610,14 +824,13 @@ abstract class _WeatherState implements WeatherState {
       required KelvinToCelcius kelvinToCelcius}) = _$_WeatherState;
 
   @override
-  Option<Either<WeatherFailure, WeatherModel>> get optionFailureOrSuccess =>
-      throw _privateConstructorUsedError;
+  Option<Either<WeatherFailure, WeatherModel>> get optionFailureOrSuccess;
   @override
-  String get city => throw _privateConstructorUsedError;
+  String get city;
   @override
-  bool get isLoading => throw _privateConstructorUsedError;
+  bool get isLoading;
   @override
-  KelvinToCelcius get kelvinToCelcius => throw _privateConstructorUsedError;
+  KelvinToCelcius get kelvinToCelcius;
   @override
   @JsonKey(ignore: true)
   _$WeatherStateCopyWith<_WeatherState> get copyWith =>

@@ -1,25 +1,36 @@
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:get/get.dart';
-import 'package:weather/application/weather/weather_bloc.dart';
-import 'package:weather/injection.dart';
+import 'package:auto_route/auto_route.dart';
+import 'package:flutter/material.dart';
+import 'package:weather/presentation/home/home_page.dart';
+import 'package:weather/presentation/home/home_wrapper_page.dart';
 import 'package:weather/presentation/sign_in/sign_in_page.dart';
-import 'package:weather/presentation/weather/widgets/weather_form.dart';
 
-class Routers {
-  static const String login = '/';
-  static const String weather = '/weather';
+part 'routers.gr.dart';
 
-  final List<GetPage> routers = [
-    GetPage(
-      name: Routers.login,
-      page: () => SignInPage(),
+// final List<GetPage> routers = [
+//   GetPage(
+//     name: Routers.login,
+//     page: () => SignInPage(),
+//   ),
+//   GetPage(
+//     name: Routers.weather,
+//     page: () => BlocProvider(
+//       create: (context) => getIt<WeatherBloc>(),
+//       child: WeatherForm(),
+//     ),
+//   ),
+// ];
+
+@MaterialAutoRouter(
+  replaceInRouteName: 'Page,Route',
+  routes: <AutoRoute>[
+    AutoRoute(path: '/', page: SignInPage),
+    AutoRoute(
+      path: 'HomeRouter',
+      page: HomeWrapperPage,
+      children: [
+        AutoRoute(path: '', page: HomePage),
+      ],
     ),
-    GetPage(
-      name: Routers.weather,
-      page: () => BlocProvider(
-        create: (context) => getIt<WeatherBloc>(),
-        child: WeatherForm(),
-      ),
-    ),
-  ];
-}
+  ],
+)
+class AppRouter extends _$AppRouter {}

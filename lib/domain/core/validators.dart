@@ -3,25 +3,17 @@ import 'package:fpdart/fpdart.dart';
 import 'package:weather/domain/core/failures/failures.dart';
 import 'package:weather/domain/core/failures/string_failures.dart';
 
-Either<ValueFailure<String>, String> validateEmail(String input) {
-  const emailRegex = r"""^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+""";
-  if (RegExp(emailRegex).hasMatch(input)) {
-    return right(input);
-  } else {
-    return left(ValueFailure.invalidEmail(failedValue: input));
-  }
-}
-
-Either<ValueFailure<String>, String> validatePassword(String input) {
-  if (input.length >= 6) {
-    return right(input);
-  } else {
-    return left(ValueFailure.shortPassword(failedValue: input));
-  }
-}
-
 // ignore: avoid_classes_with_only_static_members
 class ValueValidators {
+  static Either<StringFailure, String> validateEmail(String input) {
+    const emailRegex = r"""^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+""";
+    if (RegExp(emailRegex).hasMatch(input)) {
+      return right(input);
+    } else {
+      return left(StringFailure.invalidEmail(failedValue: input));
+    }
+  }
+
   static Either<StringFailure, String> validateMaxStringLength(
     String input,
     int maxLength,

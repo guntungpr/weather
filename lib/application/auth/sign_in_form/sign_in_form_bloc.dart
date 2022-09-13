@@ -5,7 +5,7 @@ import 'package:fpdart/fpdart.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:weather/domain/auth/auth_failure.dart';
-import 'package:weather/domain/auth/i_auth_facade.dart';
+import 'package:weather/domain/auth/i_auth_repository.dart';
 import 'package:weather/domain/auth/value_objects_auth.dart';
 import 'package:weather/infrastructure/auth/user_local_model.dart';
 
@@ -15,11 +15,12 @@ part 'sign_in_form_bloc.freezed.dart';
 
 @injectable
 class SignInFormBloc extends Bloc<SignInFormEvent, SignInFormState> {
-  final IAuthFacade _authFacade;
+  final IAuthRepository _authRepository;
 
-  SignInFormBloc(this._authFacade) : super(SignInFormState.initial()) {
+  SignInFormBloc(this._authRepository) : super(SignInFormState.initial()) {
     on<SignInFormEvent>((event, emit) async {
       await event.map(
+        initial: (e) async {},
         emailChanged: (e) async {
           emit(state.copyWith(
             emailAddress: Email(e.emailStr),
@@ -32,82 +33,33 @@ class SignInFormBloc extends Bloc<SignInFormEvent, SignInFormState> {
             authFailureOrSuccessOption: none(),
           ));
         },
-        registerWithEmailAndPasswordPressed: (e) async {
-          if (state.emailAddress.isValid() && state.password.isValid()) {
-            emit(state.copyWith(
-              isSubmitting: true,
-              authFailureOrSuccessOption: none(),
-            ));
-
-            final failureOrSuccess = await _authFacade.register(
-              email: state.emailAddress,
-              password: state.password,
-            );
-
-            emit(state.copyWith(
-              isSubmitting: false,
-              authFailureOrSuccessOption: optionOf(failureOrSuccess),
-            ));
-          }
-          emit(state.copyWith(
-            isSubmitting: false,
-            showErrorMessages: true,
-            authFailureOrSuccessOption: none(),
-          ));
-        },
-        signInWithEmailAndPasswordPressed: (e) async {
-          if (state.emailAddress.isValid() && state.password.isValid()) {
-            emit(state.copyWith(
-              isSubmitting: true,
-              authFailureOrSuccessOption: none(),
-            ));
-            final failureOrSuccess = await _authFacade.signIn(
-              email: state.emailAddress,
-              password: state.password,
-            );
-
-            emit(state.copyWith(
-              isSubmitting: false,
-              authFailureOrSuccessOption: some(failureOrSuccess),
-            ));
-          }
-          emit(state.copyWith(
-            isSubmitting: false,
-            showErrorMessages: true,
-            authFailureOrSuccessOption: none(),
-          ));
-        },
-        signInWithGooglePressed: (e) async {
-          emit(state.copyWith(
-            isSubmitting: true,
-            authFailureOrSuccessOption: none(),
-          ));
-          final status = await _authFacade.signInWithGoogle();
-          emit(state.copyWith(
-            isSubmitting: false,
-            authFailureOrSuccessOption: some(status),
-          ));
+        obsecurePassChanged: (e) {
+          emit(state.copyWith(obsecurePass: e.value));
         },
         signInLocal: (e) async {
+          await Future.delayed(Duration.zero);
           if (state.emailAddress.isValid()) {
             emit(state.copyWith(
-              isSubmitting: true,
+              isLoading: true,
               authFailureOrSuccessOption: none(),
             ));
-            final failureOrSuccess = await _authFacade.signInLocal(
+            final failureOrSuccess = await _authRepository.signInLocal(
               email: state.emailAddress,
               password: state.password,
             );
             emit(state.copyWith(
-              isSubmitting: false,
-              authLocal: some(failureOrSuccess),
+              authFailureOrSuccessOption: optionOf(failureOrSuccess),
+              isLoading: false,
             ));
+          } else {
+            emit(state.copyWith(authFailureOrSuccessOption: none()));
           }
-          emit(state.copyWith(
-            isSubmitting: false,
-            showErrorMessages: true,
-            authFailureOrSuccessOption: none(),
-          ));
+          add(const SignInFormEvent.submit());
+        },
+        submit: (e) async {
+          await Future.delayed(Duration.zero);
+          emit(state.copyWith(isSubmitted: true));
+          emit(state.copyWith(isSubmitted: false));
         },
       );
     });
